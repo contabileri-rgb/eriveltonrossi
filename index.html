@@ -1,120 +1,770 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Erivelton Rossi – Contador (CRC 037.881/O-1) | Consultoria Contábil, Documental e Rural</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Consultoria contábil, previdenciária administrativa, organização documental e serviços rurais. Atuação técnica e legal para produtores, famílias e empreendedores.">
-    <meta name="author" content="Erivelton Rossi">
-    <link rel="canonical" href="https://www.eriveltonrossi.com.br/">
+  <meta charset="UTF-8" />
+  <title>Erivelton Rossi | Segurança & Performance Web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Serviços de segurança digital, otimização de performance e proteção contra bots e ataques para sites e negócios online.">
+  <style>
+    :root {
+      --cor-primaria: #0e4d92;
+      --cor-primaria-clara: #54a8ff;
+      --cor-fundo: #f4f6f8;
+      --cor-texto: #111827;
+      --cor-texto-sec: #4b5563;
+      --cor-branco: #ffffff;
+      --cor-botao: #0e4d92;
+      --cor-botao-hover: #08345f;
+      --cor-borda-suave: #e5e7eb;
+      --largura-maxima: 1080px;
+      --raio: 10px;
+    }
 
-    <style>
-        body { margin:0; background:#f5f5f5; font-family:Arial, Helvetica, sans-serif; color:#222; }
-        header { background:#0b4f6c; color:white; padding:16px; }
-        header h1 { margin:0; font-size:20px; }
-        nav a { color:white; margin-right:12px; text-decoration:none; }
-        .container { max-width:1100px; margin:auto; padding:16px; }
-        .hero { background:#e3f2fd; padding:40px 16px; }
-        .hero h2 { color:#0b4f6c; font-size:28px; }
-        .btn { background:#0b4f6c; color:white; padding:10px 16px; display:inline-block; margin-top:12px; border-radius:6px; text-decoration:none; }
-        section h3 { color:#0b4f6c; font-size:20px; }
-        .card { background:white; padding:16px; border-radius:8px; margin-bottom:16px; box-shadow:0 2px 4px rgba(0,0,0,0.1); }
-        .lista { padding-left:18px; }
-        footer { background:#0b4f6c; color:white; padding:16px; font-size:12px; text-align:center; margin-top:32px; }
-    </style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--cor-fundo);
+      color: var(--cor-texto);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout base */
+    .container {
+      max-width: var(--largura-maxima);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    header {
+      background: var(--cor-branco);
+      border-bottom: 1px solid var(--cor-borda-suave);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 0;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--cor-primaria);
+    }
+
+    .brand-sub {
+      font-size: 0.8rem;
+      color: var(--cor-texto-sec);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      color: var(--cor-texto-sec);
+    }
+
+    nav a:hover {
+      background: var(--cor-primaria-clara);
+      color: var(--cor-branco);
+    }
+
+    /* Botões / CTA */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.35rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--cor-botao);
+      color: var(--cor-branco);
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+    }
+
+    .btn-primary:hover {
+      background: var(--cor-botao-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.25);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--cor-botao);
+      color: var(--cor-botao);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: rgba(14,77,146,0.06);
+    }
+
+    .btn-small {
+      padding: 0.45rem 0.9rem;
+      font-size: 0.8rem;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #0e4d92 0%, #54a8ff 60%, #f4f6f8 100%);
+      color: #f9fafb;
+      padding: 3rem 0 3.5rem;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      opacity: 0.9;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-title {
+      font-size: 2.1rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      max-width: 28rem;
+      opacity: 0.95;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      opacity: 0.9;
+    }
+
+    .hero-visual {
+      background: rgba(15,23,42,0.05);
+      border-radius: 18px;
+      padding: 1.5rem;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(15,23,42,0.08);
+      box-shadow: 0 18px 40px rgba(15,23,42,0.22);
+    }
+
+    .hero-visual-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.85rem;
+      color: #e5f0ff;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .metric-card {
+      background: rgba(15,23,42,0.55);
+      border-radius: 12px;
+      padding: 0.85rem;
+    }
+
+    .metric-title {
+      font-size: 0.7rem;
+      opacity: 0.8;
+      margin-bottom: 0.25rem;
+    }
+
+    .metric-value {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.75rem;
+      background: rgba(15,23,42,0.6);
+      padding: 0.4rem 0.7rem;
+      border-radius: 999px;
+      margin-top: 0.4rem;
+    }
+
+    /* Seções gerais */
+    section {
+      padding: 3rem 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .section-eyebrow {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.09em;
+      color: var(--cor-primaria);
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--cor-texto-sec);
+      max-width: 36rem;
+      margin: 0 auto;
+    }
+
+    /* Sobre */
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .sobre-texto p {
+      margin-bottom: 0.9rem;
+      font-size: 0.95rem;
+      color: var(--cor-texto-sec);
+    }
+
+    .sobre-highlight {
+      padding: 1rem 1.2rem;
+      background: var(--cor-branco);
+      border-radius: var(--raio);
+      border-left: 4px solid var(--cor-primaria);
+      font-size: 0.88rem;
+      color: var(--cor-texto-sec);
+      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
+    }
+
+    .sobre-lista {
+      list-style: none;
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--cor-texto-sec);
+    }
+
+    .sobre-lista li::before {
+      content: "• ";
+      color: var(--cor-primaria);
+    }
+
+    /* Serviços */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.3rem;
+    }
+
+    .card {
+      background: var(--cor-branco);
+      border-radius: var(--raio);
+      padding: 1.25rem;
+      border: 1px solid var(--cor-borda-suave);
+      box-shadow: 0 8px 24px rgba(15,23,42,0.03);
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--cor-texto-sec);
+      margin-bottom: 0.6rem;
+    }
+
+    .card ul {
+      list-style: none;
+      font-size: 0.84rem;
+      color: var(--cor-texto-sec);
+    }
+
+    .card ul li {
+      margin-bottom: 0.25rem;
+    }
+
+    .card ul li::before {
+      content: "✓ ";
+      color: var(--cor-primaria);
+      font-weight: 600;
+    }
+
+    /* Por que confiar */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .pill-list {
+      list-style: none;
+      display: grid;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--cor-texto-sec);
+    }
+
+    .pill-list li {
+      background: var(--cor-branco);
+      border-radius: 999px;
+      padding: 0.45rem 0.9rem;
+      border: 1px solid var(--cor-borda-suave);
+    }
+
+    /* Depoimentos */
+    .depo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .depo-card {
+      background: var(--cor-branco);
+      border-radius: var(--raio);
+      padding: 1rem;
+      border: 1px solid var(--cor-borda-suave);
+      font-size: 0.9rem;
+      color: var(--cor-texto-sec);
+      box-shadow: 0 8px 24px rgba(15,23,42,0.04);
+    }
+
+    .depo-nome {
+      font-weight: 600;
+      margin-top: 0.6rem;
+      font-size: 0.86rem;
+      color: var(--cor-primaria);
+    }
+
+    /* Contato */
+    .contato-wrapper {
+      background: var(--cor-branco);
+      border-radius: 16px;
+      padding: 1.8rem 1.5rem;
+      border: 1px solid var(--cor-borda-suave);
+      box-shadow: 0 10px 28px rgba(15,23,42,0.04);
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contato-wrapper p {
+      font-size: 0.95rem;
+      color: var(--cor-texto-sec);
+      margin-bottom: 1rem;
+    }
+
+    .contato-dados {
+      font-size: 0.9rem;
+      color: var(--cor-texto-sec);
+      margin-top: 1rem;
+    }
+
+    .contato-dados div {
+      margin-bottom: 0.25rem;
+    }
+
+    /* Rodapé */
+    footer {
+      border-top: 1px solid var(--cor-borda-suave);
+      background: #f9fafb;
+      padding: 1.2rem 0;
+      font-size: 0.82rem;
+      color: #6b7280;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #4b5563;
+    }
+
+    .footer-links a:hover {
+      color: var(--cor-primaria);
+    }
+
+    /* Responsivo */
+    @media (max-width: 900px) {
+      .hero-inner,
+      .sobre-grid,
+      .cards-grid,
+      .grid-2,
+      .depo-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero {
+        padding-top: 2.2rem;
+      }
+      .hero-inner {
+        gap: 2rem;
+      }
+      nav ul {
+        display: none; /* menu simples por enquanto */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-title {
+        font-size: 1.7rem;
+      }
+      .hero-subtitle {
+        font-size: 0.92rem;
+      }
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .hero-visual {
+        padding: 1.1rem;
+      }
+      section {
+        padding: 2.3rem 0;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<header class="container">
-    <h1>Erivelton Rossi – Contador (CRC 037.881/O-1)</h1>
-    <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="politica.html">Política de Privacidade</a>
-        <a href="#contato">Contato</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <div class="container">
-        <h2>Consultoria Contábil, Documental e Rural</h2>
-        <p>Atuação técnica e administrativa em contabilidade, organização documental, previdência administrativa e serviços rurais. Atendimento claro e profissional para famílias, produtores e pequenos negócios.</p>
-        <a class="btn" href="https://wa.me/5549991242014?text=Ol%C3%A1,%20gostaria%20de%20uma%20orienta%C3%A7%C3%A3o.">Falar pelo WhatsApp</a>
-    </div>
-</section>
-
-<main class="container">
-
-<section id="sobre">
-    <h3>Sobre mim</h3>
-    <div class="card">
-        <p>Sou <strong>Erivelton Rossi</strong>, Contador registrado no CRC sob nº <strong>037.881/O-1</strong>, com atuação em consultoria contábil, previdenciária administrativa, organização documental e serviços rurais. Atendo Herval d’Oeste e região com foco em clareza, objetividade e segurança técnica.</p>
-        <p>Meu trabalho é 100% administrativo e contábil, respeitando as normas legais e éticas, sem prática de atos privativos da advocacia.</p>
-    </div>
-</section>
-
-<section id="servicos">
-    <h3>Serviços oferecidos</h3>
-
-    <div class="card">
-        <h4 style="color:#0b4f6c;">📌 Consultoria Contábil</h4>
-        <ul class="lista">
-            <li>Planejamento tributário básico.</li>
-            <li>Auxílio em abertura e regularização de MEI e produtor rural.</li>
-            <li>Organização financeira e orientação fiscal.</li>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="container topbar">
+      <div class="brand">
+        <span class="brand-title">Erivelton Rossi</span>
+        <span class="brand-sub">Segurança & Performance Web</span>
+      </div>
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#confiar">Por que confiar</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
+      </nav>
     </div>
+  </header>
 
-    <div class="card">
-        <h4 style="color:#0b4f6c;">📌 Consultoria Previdenciária Administrativa</h4>
-        <ul class="lista">
-            <li>Simulação de tempo de contribuição.</li>
-            <li>Checklist para requerimentos administrativos no INSS.</li>
-            <li>Organização de documentos para benefícios.</li>
-        </ul>
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <div class="hero-kicker">Segurança, estabilidade e tranquilidade digital</div>
+          <h1 class="hero-title">
+            Proteção, Performance e Segurança para o seu site ou negócio online
+          </h1>
+          <p class="hero-subtitle">
+            Configuro e cuido da proteção do seu site com Cloudflare, firewall, regras contra bots e otimizações de desempenho, para que você possa focar no que importa: o seu trabalho.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/5549991242014" target="_blank" rel="noopener noreferrer">
+              Falar comigo no WhatsApp
+            </a>
+            <a class="btn btn-outline" href="#servicos">
+              Ver serviços
+            </a>
+          </div>
+          <p class="hero-note">
+            Atuação remota, com linguagem simples e foco em segurança prática e resultados reais.
+          </p>
+        </div>
+
+        <aside class="hero-visual" aria-label="Resumo de segurança do site">
+          <div class="hero-visual-title">Resumo de proteção</div>
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <div class="metric-title">Ataques bloqueados</div>
+              <div class="metric-value">&gt; 1.000</div>
+              <div style="font-size:0.75rem; opacity:0.8;">Bots, scanners e acessos maliciosos</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-title">Disponibilidade</div>
+              <div class="metric-value">99,9%</div>
+              <div style="font-size:0.75rem; opacity:0.8;">Monitoramento e estabilidade</div>
+            </div>
+          </div>
+          <p style="font-size:0.8rem; opacity:0.9;">
+            Regras inteligentes de firewall, bloqueio por país, proteção contra flood e otimizações de carregamento aplicadas sob medida.
+          </p>
+          <div class="hero-badge">
+            🔒 Site protegido com Cloudflare & boas práticas de segurança
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-eyebrow">Sobre mim</div>
+          <h2 class="section-title">Quem sou e como posso te ajudar</h2>
+          <p class="section-subtitle">
+            Unindo tecnologia, segurança digital e uma comunicação simples, ajudo você a ter um site mais protegido, estável e preparado para crescer com tranquilidade.
+          </p>
+        </div>
+
+        <div class="sobre-grid">
+          <div class="sobre-texto">
+            <p>
+              Meu nome é <strong>Erivelton Rossi</strong> e sou entusiasta de segurança digital, infraestrutura web e proteção contra bots e ataques que atrapalham o dia a dia de pessoas e negócios na internet.
+            </p>
+            <p>
+              A ideia é bem direta: analisar a situação do seu site, aplicar configurações avançadas de Cloudflare, firewall, otimização de cache e regras de proteção — e traduzir tudo isso para você em linguagem simples, sem “tecniquês”.
+            </p>
+            <p>
+              Você não precisa entender de servidores, proxies, DNS, HTTPS ou WAF. Eu cuido disso por você, com responsabilidade, transparência e foco em estabilidade e segurança.
+            </p>
+          </div>
+
+          <div>
+            <div class="sobre-highlight">
+              <strong>O que você ganha com esse tipo de trabalho?</strong>
+              <ul class="sobre-lista">
+                <li>Menos riscos de invasão, spam e ataques automatizados.</li>
+                <li>Menos quedas e travamentos por excesso de acessos.</li>
+                <li>Mais confiança para você divulgar seu site e seus serviços.</li>
+                <li>Alguém de confiança acompanhando sua estrutura digital.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-eyebrow">Serviços</div>
+          <h2 class="section-title">O que posso fazer pelo seu site</h2>
+          <p class="section-subtitle">
+            Cada projeto é único, mas em geral o trabalho passa por segurança, performance e acompanhamento contínuo da sua presença digital.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <h3>🔐 Segurança e Firewall</h3>
+            <p>
+              Configuração de proteção avançada com Cloudflare, regras sob medida e bloqueio de acessos maliciosos.
+            </p>
+            <ul>
+              <li>Firewall personalizado por país, IP e comportamento.</li>
+              <li>Bloqueio de bots, scanners e tentativas suspeitas.</li>
+              <li>Proteção de áreas sensíveis como /login e /admin.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>⚡ Performance & Velocidade</h3>
+            <p>
+              Otimizações para reduzir lentidão, travamentos e melhor aproveitar a CDN.
+            </p>
+            <ul>
+              <li>Ajustes de cache, compressão e otimização de entrega.</li>
+              <li>Configuração de TLS, HTTPS e melhorias de resposta.</li>
+              <li>Análise de gargalos e sugestões de melhoria técnica.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>🛠️ Suporte & Monitoramento</h3>
+            <p>
+              Acompanhamento para que o site continue seguro com o passar do tempo.
+            </p>
+            <ul>
+              <li>Alertas de segurança e atividades suspeitas.</li>
+              <li>Ajustes de regras conforme o comportamento do tráfego.</li>
+              <li>Contato direto para dúvidas e atualizações.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Por que confiar -->
+    <section id="confiar">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-eyebrow">Confiança</div>
+          <h2 class="section-title">Por que confiar no meu trabalho</h2>
+          <p class="section-subtitle">
+            Segurança não é só ferramenta. É postura, clareza, responsabilidade e compromisso com o que é importante para você.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div>
+            <ul class="pill-list">
+              <li>Atendimento humano, direto e sem burocracia.</li>
+              <li>Explicações claras sobre o que está sendo feito.</li>
+              <li>Foco na sua tranquilidade e não em “vender complicação”.</li>
+              <li>Uso de boas práticas de segurança digital e infraestrutura.</li>
+              <li>Acompanhamento e suporte conforme a necessidade.</li>
+            </ul>
+          </div>
+          <div>
+            <p style="font-size:0.92rem; color:var(--cor-texto-sec); margin-bottom:0.7rem;">
+              A internet abre portas, mas também expõe sites e pessoas a riscos. Ter alguém cuidando da parte técnica de proteção faz diferença na sua rotina.
+            </p>
+            <p style="font-size:0.92rem; color:var(--cor-texto-sec);">
+              Se você sente que “poderia estar mais seguro”, que “recebe muito acesso estranho” ou que “não tem tempo para olhar isso”, eu posso te ajudar a colocar ordem na casa, com calma e responsabilidade.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-eyebrow">Depoimentos</div>
+          <h2 class="section-title">O que dizem sobre o meu trabalho</h2>
+          <p class="section-subtitle">
+            Alguns relatos de experiências com proteção, performance e suporte em estruturas digitais.
+          </p>
+        </div>
+
+        <div class="depo-grid">
+          <article class="depo-card">
+            <p>
+              “Depois das configurações, meu site parou de cair e ficou mais estável mesmo com mais acessos. Hoje consigo trabalhar com mais tranquilidade.”
+            </p>
+            <div class="depo-nome">Empreendedora, e-commerce</div>
+          </article>
+          <article class="depo-card">
+            <p>
+              “Tinha medo de lidar com parte técnica, mas o Erivelton me explicou tudo de forma simples e cuidou da segurança e da performance sem complicar.”
+            </p>
+            <div class="depo-nome">Profissional liberal, serviços online</div>
+          </article>
+          <article class="depo-card">
+            <p>
+              “Os ataques automatizados foram reduzidos de forma visível e conseguimos focar no negócio em vez de ficar apagando incêndio no site.”
+            </p>
+            <div class="depo-nome">Negócio local com presença digital</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-eyebrow">Contato</div>
+          <h2 class="section-title">Vamos conversar sobre o seu site?</h2>
+          <p class="section-subtitle">
+            Se você quer deixar sua presença digital mais segura e estável, podemos dar o primeiro passo em uma conversa simples e direta, sem compromisso.
+          </p>
+        </div>
+
+        <div class="contato-wrapper">
+          <p>
+            Me mande uma mensagem explicando um pouco do seu site, do tipo de atividade que você exerce e do que tem te preocupado. A partir disso, posso sugerir os primeiros ajustes e, se fizer sentido, um acompanhamento mais próximo.
+          </p>
+          <div style="margin-bottom:1.2rem;">
+            <a class="btn btn-primary" href="https://wa.me/5549991242014" target="_blank" rel="noopener noreferrer">
+              Falar comigo no WhatsApp
+            </a>
+          </div>
+
+          <div class="contato-dados">
+            <div><strong>E-mail:</strong> <a href="mailto:contabileri@gmail.com">contabileri@gmail.com</a></div>
+            <div><strong>Telefone/WhatsApp:</strong> (49) 9 9124-2014</div>
+            <div><strong>Cidade:</strong> Herval d’Oeste – SC, Brasil</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        © 2025 <strong>Erivelton Rossi</strong> – Segurança & Performance Web. Todos os direitos reservados.
+      </div>
+      <div class="footer-links">
+        <span>Site protegido com Cloudflare</span>
+        <span>Desenvolvido com apoio de IA (OpenAI)</span>
+      </div>
     </div>
-
-    <div class="card">
-        <h4 style="color:#0b4f6c;">📌 Consultoria Documental</h4>
-        <ul class="lista">
-            <li>Organização de documentos pessoais e empresariais.</li>
-            <li>Revisão de contratos particulares simples.</li>
-            <li>Preparação documental para análises contábeis ou jurídicas futuras.</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h4 style="color:#0b4f6c;">📌 Serviços Rurais</h4>
-        <ul class="lista">
-            <li>Revisão de CCIR, CAF, CAR e ITR.</li>
-            <li>Documentação para crédito rural.</li>
-            <li>Organização de documentos para propriedades rurais.</li>
-        </ul>
-    </div>
-
-</section>
-
-<section id="contato">
-    <h3>Contato</h3>
-    <div class="card">
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/5549991242014" target="_blank">(49) 99124-2014</a></p>
-        <p><strong>E-mail:</strong> contabileri@gmail.com</p>
-        <p><strong>Cidade/UF:</strong> Herval d’Oeste – SC</p>
-        <p><strong>Site:</strong> www.eriveltonrossi.com.br</p>
-    </div>
-</section>
-
-</main>
-
-<!-- 🌟 CRÉDITO DA OPENAI – OPÇÃO 3 -->
-<div style="text-align:center; font-size:12px; margin:20px 0; color:#0b4f6c;">
-    💡 Projeto desenvolvido com apoio tecnológico da <strong>OpenAI</strong>.
-</div>
-
-<footer>
-    <p>Atuação restrita à consultoria contábil, administrativa, documental e rural. Não realizo atos privativos da advocacia (Lei 8.906/94).</p>
-    <p>© 2025 Erivelton Rossi – www.eriveltonrossi.com.br</p>
-</footer>
-
+  </footer>
 </body>
 </html>
