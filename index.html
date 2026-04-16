@@ -1,353 +1,1045 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Erivelton Rossi | Perfil profissional e conteúdo informativo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Perfil profissional e conteúdo informativo sobre organização documental, regularizações e temas jurídicos e administrativos. Atendimento mediante agendamento.">
-    <meta name="author" content="Erivelton Rossi">
-    <link rel="canonical" href="https://www.eriveltonrossi.com.br/">
+  <meta charset="UTF-8">
+  <title>Erivelton Rossi | Acadêmico de Direito — Joaçaba/SC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Perfil acadêmico e informativo de Erivelton Rossi, acadêmico de Direito na 10ª fase. Conteúdo orientativo sobre organização documental, temas jurídicos e administrativos. Joaçaba/SC.">
+  <meta name="author" content="Erivelton Rossi">
+  <link rel="canonical" href="https://www.eriveltonrossi.com.br/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            --cor-primaria: #0b4f6c;
-            --cor-primaria-escura: #063547;
-            --cor-secundaria: #f5f5f5;
-            --cor-destaque: #e3f2fd;
-            --cor-texto: #222;
-            --raio-borda: 10px;
-            --sombra: 0 10px 25px rgba(0, 0, 0, 0.08);
-        }
+  <style>
+    :root {
+      --azul:        #0c3d5c;
+      --azul-medio:  #1a5f8a;
+      --azul-claro:  #e8f2f9;
+      --ouro:        #b8902a;
+      --ouro-claro:  #f5edda;
+      --branco:      #ffffff;
+      --cinza-bg:    #f7f8fa;
+      --cinza-borda: #e2e8ee;
+      --texto:       #1c2b38;
+      --texto-suave: #4d6475;
+      --raio:        8px;
+      --raio-lg:     14px;
+      --sombra-sutil: 0 2px 12px rgba(12,61,92,0.08);
+      --sombra-card:  0 4px 20px rgba(12,61,92,0.10);
+    }
 
-        * {
-            box-sizing: border-box;
-        }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            color: var(--cor-texto);
-            background:
-                radial-gradient(circle at top left, #ffffff 0, #f0f4f8 40%, #e0e7ef 80%),
-                linear-gradient(to bottom, #f8fafc, #edf2f7);
-        }
+    html { scroll-behavior: smooth; }
 
-        header {
-            background: linear-gradient(120deg, var(--cor-primaria), var(--cor-primaria-escura));
-            color: #fff;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      color: var(--texto);
+      background: var(--cinza-bg);
+      font-size: 16px;
+      line-height: 1.7;
+    }
 
-        .topo {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 14px 16px;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 8px 16px;
-        }
+    /* ── HEADER ─────────────────────────────────────── */
+    header {
+      background: var(--azul);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 20px;
-        }
+    .topo {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
 
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
+    .logo-nome {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.01em;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-            padding: 6px 10px;
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.15);
-            background: rgba(255,255,255,0.06);
-            transition: background 0.2s, transform 0.15s, box-shadow 0.15s;
-        }
+    .logo-nome span {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
 
-        nav a:hover {
-            background: rgba(255,255,255,0.18);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
+    nav { display: flex; flex-wrap: wrap; gap: 4px; }
 
-        .banner-topo {
-            max-width: 1100px;
-            margin: 20px auto 0;
-            padding: 0 16px;
-        }
+    nav a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 400;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.12);
+      transition: all 0.2s;
+    }
 
-        .banner-topo img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 12px;
-            box-shadow: var(--sombra);
-        }
+    nav a:hover {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+    }
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 16px;
-        }
+    /* ── HERO ────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, var(--azul) 0%, var(--azul-medio) 100%);
+      padding: 64px 24px 56px;
+      position: relative;
+      overflow: hidden;
+    }
 
-        .hero {
-            background: radial-gradient(circle at top left, #ffffff 0, var(--cor-destaque) 40%);
-            padding: 40px 16px 32px;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
 
-        .hero-conteudo {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-            gap: 24px;
-            align-items: center;
-        }
+    .hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+    }
 
-        .hero h2 {
-            color: var(--cor-primaria);
-            font-size: 28px;
-            margin-top: 0;
-        }
+    .hero-texto h1 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
 
-        .hero p {
-            margin-top: 8px;
-            line-height: 1.5;
-        }
+    .hero-texto h1 em {
+      font-style: italic;
+      color: #d4a84b;
+    }
 
-        .hero-destaque {
-            background: #fff;
-            padding: 18px 16px;
-            border-radius: var(--raio-borda);
-            box-shadow: var(--sombra);
-            border-left: 4px solid var(--cor-primaria);
-            font-size: 14px;
-        }
+    .hero-texto p {
+      color: rgba(255,255,255,0.82);
+      font-size: 16px;
+      max-width: 520px;
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
 
-        .btn {
-            background: var(--cor-primaria);
-            color: white;
-            padding: 10px 18px;
-            display: inline-block;
-            margin-top: 16px;
-            border-radius: 999px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-            letter-spacing: 0.02em;
-            box-shadow: 0 8px 18px rgba(11,79,108,0.35);
-            transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
-        }
+    .hero-cta-grupo {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
 
-        .btn:hover {
-            background: var(--cor-primaria-escura);
-            transform: translateY(-1px);
-            box-shadow: 0 12px 24px rgba(11,79,108,0.45);
-        }
+    .btn-primario {
+      background: var(--ouro);
+      color: #fff;
+      padding: 13px 26px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      box-shadow: 0 6px 20px rgba(184,144,42,0.4);
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-        section h3 {
-            color: var(--cor-primaria);
-            font-size: 22px;
-            margin-top: 8px;
-            margin-bottom: 10px;
-        }
+    .btn-primario:hover {
+      background: #a07820;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 28px rgba(184,144,42,0.5);
+    }
 
-        .card {
-            background: white;
-            padding: 18px 18px 16px;
-            border-radius: var(--raio-borda);
-            margin-bottom: 18px;
-            box-shadow: var(--sombra);
-            border: 1px solid rgba(0,0,0,0.03);
-        }
+    .btn-secundario {
+      color: rgba(255,255,255,0.85);
+      padding: 13px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 400;
+      border: 1px solid rgba(255,255,255,0.25);
+      transition: all 0.2s;
+    }
 
-        .card h4 {
-            margin-top: 0;
-            margin-bottom: 6px;
-            color: var(--cor-primaria);
-        }
+    .btn-secundario:hover {
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+    }
 
-        .lista {
-            padding-left: 18px;
-            margin: 4px 0 0;
-        }
+    /* Foto no hero */
+    .hero-foto {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba(255,255,255,0.2);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      flex-shrink: 0;
+    }
 
-        .lista li {
-            margin-bottom: 4px;
-        }
+    /* Aviso acadêmico discreto */
+    .aviso-academico {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--raio);
+      padding: 12px 16px;
+      margin-top: 24px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.65);
+      max-width: 520px;
+      line-height: 1.5;
+    }
 
-        .servicos-grid {
-            display: grid;
-            gap: 16px;
-        }
+    /* ── BANNER FOTO ─────────────────────────────────── */
+    .secao-banner {
+      max-width: 1080px;
+      margin: 36px auto 0;
+      padding: 0 24px;
+    }
 
-        @media (min-width: 840px) {
-            .servicos-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-        }
+    .secao-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: var(--raio-lg);
+      box-shadow: var(--sombra-card);
+    }
 
-        #contato .card p {
-            margin: 4px 0;
-        }
+    /* ── SEÇÃO FUNIL ─────────────────────────────────── */
+    .funil {
+      background: var(--branco);
+      border-top: 1px solid var(--cinza-borda);
+      border-bottom: 1px solid var(--cinza-borda);
+      padding: 48px 24px;
+    }
 
-        #contato a {
-            color: var(--cor-primaria);
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .funil-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
 
-        #contato a:hover {
-            text-decoration: underline;
-        }
+    .secao-titulo {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ouro);
+      margin-bottom: 8px;
+    }
 
-        .credito {
-            text-align: center;
-            font-size: 12px;
-            margin: 24px 0 6px;
-            color: var(--cor-primaria);
-        }
+    .secao-h2 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: clamp(20px, 3vw, 26px);
+      font-weight: 600;
+      color: var(--azul);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
 
-        footer {
-            background: var(--cor-primaria-escura);
-            color: white;
-            padding: 14px 16px 18px;
-            font-size: 12px;
-            text-align: center;
-            margin-top: 12px;
-        }
+    .secao-sub {
+      color: var(--texto-suave);
+      font-size: 15px;
+      max-width: 560px;
+      margin-bottom: 36px;
+    }
 
-        footer p {
-            margin: 4px 0;
-        }
+    .funil-passos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 20px;
+    }
 
-        @media (max-width: 720px) {
-            .hero-conteudo {
-                grid-template-columns: minmax(0, 1fr);
-            }
+    .passo {
+      background: var(--cinza-bg);
+      border: 1px solid var(--cinza-borda);
+      border-radius: var(--raio-lg);
+      padding: 24px 20px;
+      position: relative;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
 
-            header h1 {
-                font-size: 18px;
-            }
+    .passo:hover {
+      box-shadow: var(--sombra-card);
+      transform: translateY(-2px);
+    }
 
-            .hero {
-                padding-top: 28px;
-            }
-        }
-    </style>
+    .passo-num {
+      width: 32px;
+      height: 32px;
+      background: var(--azul);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+
+    .passo h4 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--azul);
+      margin-bottom: 6px;
+    }
+
+    .passo p {
+      font-size: 13.5px;
+      color: var(--texto-suave);
+      line-height: 1.6;
+    }
+
+    /* ── CONTAINER PRINCIPAL ─────────────────────────── */
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    /* ── SEÇÃO SOBRE ─────────────────────────────────── */
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .card {
+      background: var(--branco);
+      border: 1px solid var(--cinza-borda);
+      border-radius: var(--raio-lg);
+      padding: 28px 26px;
+      box-shadow: var(--sombra-sutil);
+    }
+
+    .card-destaque {
+      border-left: 3px solid var(--ouro);
+    }
+
+    .card h4 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--azul);
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 14.5px;
+      color: var(--texto-suave);
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    .badge-local {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--azul-claro);
+      color: var(--azul);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 5px 12px;
+      border-radius: 20px;
+      margin-top: 8px;
+    }
+
+    /* ── ÁREAS DE ATUAÇÃO ────────────────────────────── */
+    .areas-secao {
+      background: var(--branco);
+      border-top: 1px solid var(--cinza-borda);
+      border-bottom: 1px solid var(--cinza-borda);
+      padding: 56px 24px;
+    }
+
+    .areas-inner { max-width: 1080px; margin: 0 auto; }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .area-card {
+      background: var(--cinza-bg);
+      border: 1px solid var(--cinza-borda);
+      border-radius: var(--raio-lg);
+      padding: 24px 20px;
+      transition: all 0.2s;
+      cursor: default;
+    }
+
+    .area-card:hover {
+      background: var(--azul-claro);
+      border-color: var(--azul-medio);
+      box-shadow: var(--sombra-card);
+      transform: translateY(-2px);
+    }
+
+    .area-icone {
+      font-size: 26px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .area-card h4 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--azul);
+      margin-bottom: 8px;
+    }
+
+    .area-card p {
+      font-size: 13.5px;
+      color: var(--texto-suave);
+      line-height: 1.6;
+    }
+
+    /* ── FLUXOGRAMA VISUAL LAW ───────────────────────── */
+    .fluxo-secao {
+      padding: 56px 24px;
+      background: var(--cinza-bg);
+    }
+
+    .fluxo-inner { max-width: 1080px; margin: 0 auto; }
+
+    .fluxo-passos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      align-items: stretch;
+      justify-content: center;
+      margin-top: 32px;
+    }
+
+    .fluxo-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex: 1;
+      min-width: 140px;
+      max-width: 200px;
+      position: relative;
+    }
+
+    .fluxo-item:not(:last-child)::after {
+      content: '→';
+      position: absolute;
+      right: -16px;
+      top: 28px;
+      font-size: 20px;
+      color: var(--cinza-borda);
+      z-index: 1;
+    }
+
+    .fluxo-circulo {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--azul);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 14px rgba(12,61,92,0.25);
+      flex-shrink: 0;
+    }
+
+    .fluxo-item h5 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--azul);
+      margin-bottom: 4px;
+    }
+
+    .fluxo-item p {
+      font-size: 12px;
+      color: var(--texto-suave);
+      line-height: 1.5;
+      padding: 0 8px;
+    }
+
+    /* ── CONTATO ─────────────────────────────────────── */
+    .contato-secao {
+      background: var(--azul);
+      padding: 56px 24px;
+    }
+
+    .contato-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .contato-texto .secao-titulo { color: rgba(255,255,255,0.5); }
+    .contato-texto .secao-h2 { color: #fff; }
+    .contato-texto .secao-sub { color: rgba(255,255,255,0.65); margin-bottom: 0; }
+
+    .canais {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .canal {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--raio-lg);
+      padding: 16px 20px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .canal:hover {
+      background: rgba(255,255,255,0.13);
+      transform: translateX(3px);
+    }
+
+    .canal-icone {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .canal-icone.wpp  { background: #25D366; }
+    .canal-icone.mail { background: var(--ouro); }
+    .canal-icone.insta { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); }
+
+    .canal-info strong {
+      display: block;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .canal-info small {
+      color: rgba(255,255,255,0.55);
+      font-size: 12px;
+    }
+
+    .aviso-retorno {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--raio);
+      padding: 14px 16px;
+      margin-top: 16px;
+      font-size: 12.5px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.6;
+    }
+
+    /* ── FOOTER ──────────────────────────────────────── */
+    footer {
+      background: var(--azul-medio);
+      padding: 32px 24px;
+    }
+
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .footer-col h5 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+    }
+
+    .footer-col p, .footer-col a {
+      font-size: 12.5px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+      text-decoration: none;
+      display: block;
+    }
+
+    .footer-col a:hover { color: rgba(255,255,255,0.8); }
+
+    .footer-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 20px;
+    }
+
+    .footer-base {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .footer-base p {
+      font-size: 11.5px;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.6;
+      max-width: 420px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: rgba(255,255,255,0.8); }
+
+    /* ── COOKIE BANNER ───────────────────────────────── */
+    #cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #1a2e3d;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 16px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      z-index: 999;
+      font-size: 13px;
+      color: rgba(255,255,255,0.75);
+    }
+
+    #cookie-banner p { max-width: 600px; line-height: 1.5; }
+    #cookie-banner a { color: #d4a84b; text-decoration: none; }
+    #cookie-banner a:hover { text-decoration: underline; }
+
+    .cookie-btns { display: flex; gap: 10px; flex-shrink: 0; flex-wrap: wrap; }
+
+    .cookie-aceitar {
+      background: var(--ouro);
+      color: #fff;
+      border: none;
+      padding: 9px 20px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .cookie-aceitar:hover { background: #a07820; }
+
+    .cookie-gerenciar {
+      background: transparent;
+      color: rgba(255,255,255,0.6);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .cookie-gerenciar:hover { border-color: rgba(255,255,255,0.4); color: #fff; }
+
+    /* ── RESPONSIVO ──────────────────────────────────── */
+    @media (max-width: 768px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-foto {
+        width: 140px;
+        height: 140px;
+        margin: 0 auto;
+        order: -1;
+      }
+
+      .hero-cta-grupo { justify-content: center; }
+      .aviso-academico { margin: 24px auto 0; }
+
+      .sobre-grid { grid-template-columns: 1fr; }
+
+      .contato-inner { grid-template-columns: 1fr; }
+
+      .footer-top { grid-template-columns: 1fr; }
+
+      .fluxo-item:not(:last-child)::after { display: none; }
+
+      .fluxo-passos {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .fluxo-item { max-width: 100%; }
+    }
+
+    /* Animação de entrada suave */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-texto { animation: fadeUp 0.6s ease both; }
+    .hero-foto-wrap { animation: fadeUp 0.6s ease 0.15s both; }
+  </style>
 </head>
 <body>
 
+<!-- ── HEADER ──────────────────────────────────────── -->
 <header>
-    <div class="topo">
-        <h1>Erivelton Rossi</h1>
-        <nav>
-            <a href="#sobre">Sobre</a>
-            <a href="#atuacao">Atuação</a>
-            <a href="politica.html">Política de Privacidade</a>
-            <a href="#contato">Contato</a>
-        </nav>
+  <div class="topo">
+    <div class="logo-nome">
+      Erivelton Rossi
+      <span>Acadêmico de Direito · Joaçaba/SC</span>
     </div>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#atuacao">Atuação</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="politica.html">Privacidade</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
 </header>
 
-<section class="banner-topo">
-    <img src="banner-erivelton.png" alt="Erivelton Rossi - Acadêmico de Direito">
-</section>
-
+<!-- ── HERO ────────────────────────────────────────── -->
 <section class="hero">
-    <div class="hero-conteudo">
-        <div>
-            <h2>Perfil profissional e conteúdo informativo</h2>
-            <p>
-                Acadêmico de Direito, atualmente na 10ª fase, com dedicação a estudos jurídicos,
-                organização documental e temas administrativos.
-            </p>
-            <p>
-                Este espaço tem caráter informativo e institucional, com foco em clareza,
-                responsabilidade e boa organização de informações e documentos.
-            </p>
-            <a class="btn" href="https://wa.me/5549991242014?text=Olá,%20gostaria%20de%20mais%20informações." target="_blank">Falar pelo WhatsApp</a>
-        </div>
+  <div class="hero-inner">
+    <div class="hero-texto">
+      <h2 style="font-family:'Lora',Georgia,serif; font-size:clamp(26px,4vw,38px); font-weight:600; color:#fff; line-height:1.25; margin-bottom:16px;">
+        Clareza jurídica começa com<br><em style="font-style:italic; color:#d4a84b;">informação bem organizada.</em>
+      </h2>
+      <p>
+        Conteúdo informativo sobre temas documentais, administrativos e jurídicos.
+        Atendimento orientativo, responsável e sempre mediante agendamento prévio.
+      </p>
 
-        <div class="hero-destaque">
-            <strong>Apresentação institucional:</strong>
-            <ul class="lista">
-                <li>Conteúdo informativo sobre temas documentais, administrativos e jurídicos.</li>
-                <li>Organização de informações e documentos para melhor encaminhamento.</li>
-                <li>Atendimento mediante contato prévio e agendamento.</li>
-            </ul>
-        </div>
+      <div class="hero-cta-grupo">
+        <a class="btn-primario" href="https://wa.me/5549991242014?text=Olá,%20gostaria%20de%20agendar%20um%20atendimento." target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Agendar atendimento
+        </a>
+        <a class="btn-secundario" href="#sobre">Conhecer o perfil</a>
+      </div>
+
+      <p class="aviso-academico">
+        ⚠️ Este espaço tem caráter estritamente informativo e institucional. As informações disponibilizadas não constituem consultoria jurídica, advocacia ou assessoria formal. Erivelton Rossi é acadêmico de Direito, ainda não inscrito na OAB.
+      </p>
     </div>
+
+    <div class="hero-foto-wrap">
+      <img src="banner-erivelton.png" alt="Foto de Erivelton Rossi, acadêmico de Direito" class="hero-foto">
+    </div>
+  </div>
 </section>
 
-<main class="container">
-
-    <section id="sobre">
-        <h3>Sobre mim</h3>
-        <div class="card">
-            <p>
-                Sou <strong>Erivelton Rossi</strong>, acadêmico de Direito, atualmente na
-                <strong>10ª fase</strong>, com interesse em atuação técnica, organização documental
-                e desenvolvimento de conteúdo informativo.
-            </p>
-            <p>
-                Este site apresenta meu perfil profissional e acadêmico, reunindo informações
-                institucionais, materiais informativos e formas de contato.
-            </p>
-            <p>
-                Utilizo estrutura de trabalho no <strong>ACIOC HUB – Joaçaba/SC</strong>,
-                mediante agendamento.
-            </p>
-        </div>
-    </section>
-
-    <section id="atuacao">
-        <h3>Áreas de interesse e atuação informativa</h3>
-
-        <div class="servicos-grid">
-            <div class="card">
-                <h4>📌 Organização documental</h4>
-                <ul class="lista">
-                    <li>Estruturação de documentos e informações.</li>
-                    <li>Conferência inicial de dados e documentos.</li>
-                    <li>Preparação documental para encaminhamentos futuros.</li>
-                </ul>
-            </div>
-<section id="contato-rapido" style="text-align:center; margin:40px 0;">
-
-<h3>Contato rápido</h3>
-
-<p>Escolha o canal de atendimento:</p>
-
-<div style="display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-top:20px;">
-
-<a href="https://wa.me/5549991242014" target="_blank"
-style="background:#25D366; color:white; padding:12px 22px; text-decoration:none; border-radius:8px; font-weight:bold;">
-WhatsApp
-</a>
-
-<a href="mailto:eriveltorss.adv@gmail.com"
-style="background:#0b4f6c; color:white; padding:12px 22px; text-decoration:none; border-radius:8px; font-weight:bold;">
-E-mail
-</a>
-
-<a href="https://instagram.com/rossi_e2026" target="_blank"
-style="background:#C13584; color:white; padding:12px 22px; text-decoration:none; border-radius:8px; font-weight:bold;">
-Instagram
-</a>
-
+<!-- ── BANNER FOTO ──────────────────────────────────── -->
+<div class="secao-banner">
+  <img src="banner-erivelton.png" alt="Erivelton Rossi — Acadêmico de Direito, Joaçaba/SC">
 </div>
 
+<!-- ── FUNIL EDUCATIVO ─────────────────────────────── -->
+<section class="funil" id="como-funciona">
+  <div class="funil-inner">
+    <p class="secao-titulo">Como funciona o atendimento</p>
+    <h2 class="secao-h2">Cada etapa tem um propósito claro</h2>
+    <p class="secao-sub">O atendimento orientativo segue um caminho estruturado para que você chegue à informação certa de forma organizada.</p>
+
+    <div class="funil-passos">
+      <div class="passo">
+        <div class="passo-num">1</div>
+        <h4>Identifique sua necessidade</h4>
+        <p>Entenda qual tipo de organização documental ou informação jurídica você precisa antes do contato.</p>
+      </div>
+      <div class="passo">
+        <div class="passo-num">2</div>
+        <h4>Entre em contato</h4>
+        <p>Descreva brevemente o assunto pelo canal de sua preferência. Nenhum documento sensível é solicitado nesta etapa.</p>
+      </div>
+      <div class="passo">
+        <div class="passo-num">3</div>
+        <h4>Agendamento</h4>
+        <p>O atendimento é realizado mediante agendamento prévio. Retorno em até 1 dia útil após o contato.</p>
+      </div>
+      <div class="passo">
+        <div class="passo-num">4</div>
+        <h4>Orientação e encaminhamento</h4>
+        <p>Você recebe informações organizadas e, quando necessário, é orientado sobre os encaminhamentos adequados ao seu caso.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- ── SOBRE ────────────────────────────────────────── -->
+<main class="container" id="sobre">
+  <p class="secao-titulo">Quem sou</p>
+  <h2 class="secao-h2">Perfil acadêmico e profissional</h2>
+
+  <div class="sobre-grid" style="margin-top:24px;">
+    <div class="card card-destaque">
+      <h4>Formação e trajetória</h4>
+      <p>Sou <strong>Erivelton Rossi</strong>, acadêmico de Direito na <strong>10ª fase</strong>, com dedicação a estudos jurídicos, organização documental e desenvolvimento de conteúdo informativo nas áreas administrativa e jurídica.</p>
+      <p>Meu trabalho neste espaço tem foco em clareza, responsabilidade e boa organização de informações — facilitando a compreensão de pessoas que buscam orientação sobre temas documentais e administrativos.</p>
+      <span class="badge-local">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        ACIOC HUB · Joaçaba/SC
+      </span>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:16px;">
+      <div class="card">
+        <h4>Estrutura de trabalho</h4>
+        <p>Utilizo estrutura de trabalho no <strong>ACIOC HUB</strong> em Joaçaba/SC. Os atendimentos são realizados presencialmente ou por meio remoto, sempre com agendamento prévio.</p>
+      </div>
+      <div class="card">
+        <h4>Compromisso com a informação</h4>
+        <p>Todo conteúdo deste espaço é produzido com responsabilidade acadêmica. Quando um caso exige atendimento jurídico formal, o encaminhamento ao profissional adequado é sempre indicado.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ── ÁREAS DE ATUAÇÃO ─────────────────────────────── -->
+<section class="areas-secao" id="atuacao">
+  <div class="areas-inner">
+    <p class="secao-titulo">Temas de interesse</p>
+    <h2 class="secao-h2">Áreas de atuação informativa</h2>
+    <p class="secao-sub" style="margin-bottom:32px;">Conteúdo orientativo organizado por temas. Nenhuma das áreas abaixo representa prestação de serviços jurídicos.</p>
+
+    <div class="areas-grid">
+      <div class="area-card">
+        <span class="area-icone">📄</span>
+        <h4>Organização documental</h4>
+        <p>Estruturação de documentos, conferência inicial de dados e preparação documental para encaminhamentos futuros.</p>
+      </div>
+
+      <div class="area-card">
+        <span class="area-icone">📋</span>
+        <h4>Temas administrativos</h4>
+        <p>Informações sobre processos administrativos, regularizações e procedimentos junto a órgãos públicos.</p>
+      </div>
+
+      <div class="area-card">
+        <span class="area-icone">⚖️</span>
+        <h4>Conteúdo jurídico informativo</h4>
+        <p>Materiais educativos sobre temas jurídicos gerais, com linguagem acessível ao cidadão comum.</p>
+      </div>
+
+      <div class="area-card">
+        <span class="area-icone">🏡</span>
+        <h4>Regularizações e imóveis</h4>
+        <p>Orientações gerais sobre documentação imobiliária, registros e regularizações cadastrais.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── COMO FUNCIONA (FLUXO VISUAL LAW) ────────────── -->
+<section class="fluxo-secao">
+  <div class="fluxo-inner">
+    <p class="secao-titulo">Visual Law</p>
+    <h2 class="secao-h2">Da dúvida ao encaminhamento correto</h2>
+    <p class="secao-sub">Um caminho simples para entender como sua situação pode ser tratada.</p>
+
+    <div class="fluxo-passos">
+      <div class="fluxo-item">
+        <div class="fluxo-circulo">🤔</div>
+        <h5>Dúvida ou necessidade</h5>
+        <p>Você identifica que precisa de orientação ou organização documental</p>
+      </div>
+      <div class="fluxo-item">
+        <div class="fluxo-circulo">📞</div>
+        <h5>Primeiro contato</h5>
+        <p>Descrição breve do assunto pelo canal de preferência</p>
+      </div>
+      <div class="fluxo-item">
+        <div class="fluxo-circulo">📅</div>
+        <h5>Agendamento</h5>
+        <p>Definição de data e formato do atendimento</p>
+      </div>
+      <div class="fluxo-item">
+        <div class="fluxo-circulo">💡</div>
+        <h5>Orientação</h5>
+        <p>Informação organizada e clara sobre sua situação</p>
+      </div>
+      <div class="fluxo-item">
+        <div class="fluxo-circulo">🎯</div>
+        <h5>Encaminhamento</h5>
+        <p>Direcionamento ao profissional ou órgão adequado quando necessário</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTATO ──────────────────────────────────────── -->
+<section class="contato-secao" id="contato">
+  <div class="contato-inner">
+    <div class="contato-texto">
+      <p class="secao-titulo">Canais de atendimento</p>
+      <h2 class="secao-h2">Entre em contato</h2>
+      <p class="secao-sub">
+        Escolha o canal de sua preferência. O atendimento é realizado mediante agendamento e retorno ocorre em até 1 dia útil após o contato inicial.
+      </p>
+
+      <div class="aviso-retorno">
+        Ao entrar em contato, descreva brevemente o assunto que motivou sua mensagem. Esta informação é tratada de forma confidencial e utilizada exclusivamente para direcionar o atendimento mais adequado. Não compartilhe documentos ou dados sensíveis antes do agendamento formal.
+      </div>
+    </div>
+
+    <div class="canais">
+      <a class="canal" href="https://wa.me/5549991242014" target="_blank">
+        <div class="canal-icone wpp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </div>
+        <div class="canal-info">
+          <strong>WhatsApp</strong>
+          <small>(49) 9 9124-2014 · Atendimento de seg. a sex., 9h–18h</small>
+        </div>
+      </a>
+
+      <a class="canal" href="mailto:eriveltorss.adv@gmail.com">
+        <div class="canal-icone mail">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div class="canal-info">
+          <strong>E-mail</strong>
+          <small>eriveltorss.adv@gmail.com</small>
+        </div>
+      </a>
+
+      <a class="canal" href="https://instagram.com/rossi_e2026" target="_blank">
+        <div class="canal-icone insta">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </div>
+        <div class="canal-info">
+          <strong>Instagram</strong>
+          <small>@rossi_e2026 · Conteúdo informativo</small>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-col">
+        <h5>Erivelton Rossi</h5>
+        <p>Acadêmico de Direito — 10ª fase</p>
+        <p>ACIOC HUB · Joaçaba/SC</p>
+        <p style="margin-top:6px;">Este espaço tem caráter estritamente informativo e não constitui advocacia ou consultoria jurídica.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navegação</h5>
+        <a href="#sobre">Sobre</a>
+        <a href="#atuacao">Áreas de atuação</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#contato">Contato</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Informações legais</h5>
+        <a href="politica.html">Política de Privacidade (LGPD)</a>
+        <p style="margin-top:8px;">Responsável pelos dados: Erivelton Rossi</p>
+        <p>Contato DPO: eriveltorss.adv@gmail.com</p>
+        <p style="margin-top:8px;">Os dados coletados por este site são utilizados exclusivamente para contato e melhoria da experiência informativa. Nenhum dado é compartilhado com terceiros sem consentimento.</p>
+      </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-base">
+      <p>© 2025 Erivelton Rossi. Conteúdo informativo e institucional. Erivelton Rossi é acadêmico de Direito, não inscrito na OAB. As informações deste site não constituem aconselhamento jurídico. Para questões jurídicas formais, consulte um advogado inscrito na OAB.</p>
+      <div class="footer-links">
+        <a href="politica.html">Privacidade</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── COOKIE BANNER ──────────────────────────────── -->
+<div id="cookie-banner">
+  <p>
+    Este site utiliza cookies essenciais para garantir o funcionamento correto das páginas. Nenhum dado pessoal é compartilhado com terceiros sem sua autorização.
+    <a href="politica.html"> Política de Privacidade</a>.
+  </p>
+  <div class="cookie-btns">
+    <button class="cookie-aceitar" onclick="aceitarCookies()">Aceitar essenciais</button>
+    <button class="cookie-gerenciar" onclick="aceitarCookies()">Gerenciar preferências</button>
+  </div>
+</div>
+
+<script>
+  function aceitarCookies() {
+    document.getElementById('cookie-banner').style.display = 'none';
+    localStorage.setItem('cookies-aceitos', '1');
+  }
+  if (localStorage.getItem('cookies-aceitos')) {
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
