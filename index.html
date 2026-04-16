@@ -2,9 +2,9 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Erivelton Rossi | Acadêmico de Direito — Joaçaba/SC</title>
+  <title>Erivelton Rossi | Acadêmico de Direito — Herval d'Oeste/SC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Perfil acadêmico e informativo de Erivelton Rossi, acadêmico de Direito na 10ª fase. Conteúdo orientativo sobre organização documental, temas jurídicos e administrativos. Joaçaba/SC.">
+  <meta name="description" content="Perfil acadêmico e informativo de Erivelton Rossi, acadêmico de Direito na 10ª fase. Conteúdo orientativo sobre organização documental, temas jurídicos e administrativos. Herval d'Oeste/SC.">
   <meta name="author" content="Erivelton Rossi">
   <link rel="canonical" href="https://www.eriveltonrossi.com.br/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,20 +13,20 @@
 
   <style>
     :root {
-      --azul:        #0c3d5c;
-      --azul-medio:  #1a5f8a;
-      --azul-claro:  #e8f2f9;
+      --azul:        #7a0c1f;
+      --azul-medio:  #a01428;
+      --azul-claro:  #fdf0f2;
       --ouro:        #b8902a;
       --ouro-claro:  #f5edda;
       --branco:      #ffffff;
-      --cinza-bg:    #f7f8fa;
-      --cinza-borda: #e2e8ee;
-      --texto:       #1c2b38;
-      --texto-suave: #4d6475;
+      --cinza-bg:    #faf8f8;
+      --cinza-borda: #eddde0;
+      --texto:       #1c1416;
+      --texto-suave: #6b4047;
       --raio:        8px;
       --raio-lg:     14px;
-      --sombra-sutil: 0 2px 12px rgba(12,61,92,0.08);
-      --sombra-card:  0 4px 20px rgba(12,61,92,0.10);
+      --sombra-sutil: 0 2px 12px rgba(122,12,31,0.08);
+      --sombra-card:  0 4px 20px rgba(122,12,31,0.10);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -43,74 +43,142 @@
 
     /* ── HEADER ─────────────────────────────────────── */
     header {
-      background: var(--azul);
+      background: linear-gradient(180deg, #5c0a18 0%, #7a0c1f 100%);
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+      box-shadow: 0 3px 20px rgba(0,0,0,0.28);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
     }
 
     .topo {
       max-width: 1080px;
       margin: 0 auto;
-      padding: 14px 24px;
+      padding: 18px 24px 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+    }
+
+    /* Linhas decorativas laterais */
+    .topo::before,
+    .topo::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(212,168,75,0.5));
+    }
+    .topo::before { left: 24px; background: linear-gradient(to right, transparent, rgba(212,168,75,0.4)); }
+    .topo::after  { right: 24px; background: linear-gradient(to left, transparent, rgba(212,168,75,0.4)); }
+
+    .logo-bloco {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .logo-icone {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* Linhas finas ao lado do ícone da balança */
+    .logo-linha {
+      width: 36px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(212,168,75,0.6));
+    }
+    .logo-linha.dir {
+      background: linear-gradient(to left, transparent, rgba(212,168,75,0.6));
     }
 
     .logo-nome {
       font-family: 'Lora', Georgia, serif;
-      font-size: 18px;
+      font-size: 22px;
       font-weight: 600;
       color: #fff;
-      letter-spacing: 0.01em;
+      letter-spacing: 0.04em;
+      text-align: center;
     }
 
-    .logo-nome span {
-      display: block;
+    .logo-sub {
       font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 300;
-      color: rgba(255,255,255,0.65);
-      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      margin-top: 1px;
+      text-align: center;
     }
 
-    nav { display: flex; flex-wrap: wrap; gap: 4px; }
+    /* Separador dourado */
+    .header-divider {
+      width: 40px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(212,168,75,0.7), transparent);
+      margin: 2px 0;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px;
+      justify-content: center;
+    }
 
     nav a {
-      color: rgba(255,255,255,0.85);
+      color: rgba(255,255,255,0.75);
       text-decoration: none;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 400;
-      padding: 6px 14px;
+      letter-spacing: 0.04em;
+      padding: 5px 14px;
       border-radius: 20px;
-      border: 1px solid rgba(255,255,255,0.12);
       transition: all 0.2s;
     }
 
     nav a:hover {
-      background: rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.09);
       color: #fff;
     }
 
     /* ── HERO ────────────────────────────────────────── */
     .hero {
-      background: linear-gradient(135deg, var(--azul) 0%, var(--azul-medio) 100%);
+      background: linear-gradient(135deg, #5c0a18 0%, #8b1020 60%, #a01428 100%);
       padding: 64px 24px 56px;
       position: relative;
       overflow: hidden;
     }
 
+    /* Balança da Justiça ao fundo */
     .hero::before {
       content: '';
       position: absolute;
+      right: -60px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 520px;
+      height: 520px;
+      opacity: 0.06;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='white'%3E%3Crect x='49' y='8' width='2' height='72' rx='1'/%3E%3Crect x='20' y='14' width='60' height='2.5' rx='1.25'/%3E%3Ccircle cx='50' cy='10' r='3'/%3E%3Cellipse cx='28' cy='38' rx='14' ry='3.5' fill='none' stroke='white' stroke-width='2'/%3E%3Cline x1='22' y1='16' x2='22' y2='35' stroke='white' stroke-width='1.5'/%3E%3Cline x1='34' y1='16' x2='34' y2='35' stroke='white' stroke-width='1.5'/%3E%3Cellipse cx='72' cy='32' rx='14' ry='3.5' fill='none' stroke='white' stroke-width='2'/%3E%3Cline x1='66' y1='16' x2='66' y2='29' stroke='white' stroke-width='1.5'/%3E%3Cline x1='78' y1='16' x2='78' y2='29' stroke='white' stroke-width='1.5'/%3E%3Crect x='42' y='78' width='16' height='3' rx='1.5'/%3E%3Crect x='38' y='81' width='24' height='2' rx='1'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: contain;
+      pointer-events: none;
+    }
+
+    /* Padrão geométrico sutil */
+    .hero::after {
+      content: '';
+      position: absolute;
       inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       pointer-events: none;
     }
 
@@ -122,6 +190,7 @@
       gap: 48px;
       align-items: center;
       position: relative;
+      z-index: 1;
     }
 
     .hero-texto h1 {
@@ -496,7 +565,7 @@
 
     /* ── CONTATO ─────────────────────────────────────── */
     .contato-secao {
-      background: var(--azul);
+      background: linear-gradient(135deg, #5c0a18 0%, #8b1020 100%);
       padding: 56px 24px;
     }
 
@@ -576,7 +645,7 @@
 
     /* ── FOOTER ──────────────────────────────────────── */
     footer {
-      background: var(--azul-medio);
+      background: #3d060f;
       padding: 32px 24px;
     }
 
@@ -652,7 +721,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: #1a2e3d;
+      background: #2a0509;
       border-top: 1px solid rgba(255,255,255,0.1);
       padding: 16px 24px;
       display: flex;
@@ -747,9 +816,28 @@
 <!-- ── HEADER ──────────────────────────────────────── -->
 <header>
   <div class="topo">
-    <div class="logo-nome">
-      Erivelton Rossi
-      <span>Acadêmico de Direito · Joaçaba/SC</span>
+    <div class="logo-bloco">
+      <div class="logo-icone">
+        <span class="logo-linha"></span>
+        <!-- Balança da Justiça SVG -->
+        <svg width="22" height="22" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.75">
+          <rect x="48" y="6" width="4" height="72" rx="2" fill="#d4a84b"/>
+          <rect x="18" y="14" width="64" height="3" rx="1.5" fill="#d4a84b"/>
+          <circle cx="50" cy="8" r="5" fill="#d4a84b"/>
+          <path d="M22 17 L22 38" stroke="#d4a84b" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M34 17 L34 38" stroke="#d4a84b" stroke-width="2.5" stroke-linecap="round"/>
+          <ellipse cx="28" cy="40" rx="13" ry="4" stroke="#d4a84b" stroke-width="2.5" fill="none"/>
+          <path d="M66 17 L66 32" stroke="#d4a84b" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M78 17 L78 32" stroke="#d4a84b" stroke-width="2.5" stroke-linecap="round"/>
+          <ellipse cx="72" cy="34" rx="13" ry="4" stroke="#d4a84b" stroke-width="2.5" fill="none"/>
+          <rect x="42" y="78" width="16" height="4" rx="2" fill="#d4a84b"/>
+          <rect x="36" y="82" width="28" height="3" rx="1.5" fill="#d4a84b"/>
+        </svg>
+        <span class="logo-linha dir"></span>
+      </div>
+      <div class="logo-nome">Erivelton Rossi</div>
+      <div class="header-divider"></div>
+      <div class="logo-sub">Acadêmico de Direito &nbsp;·&nbsp; Herval d'Oeste / SC</div>
     </div>
     <nav>
       <a href="#sobre">Sobre</a>
@@ -794,7 +882,7 @@
 
 <!-- ── BANNER FOTO ──────────────────────────────────── -->
 <div class="secao-banner">
-  <img src="banner-erivelton.png" alt="Erivelton Rossi — Acadêmico de Direito, Joaçaba/SC">
+  <img src="banner-erivelton.png" alt="Erivelton Rossi — Acadêmico de Direito, Herval d'Oeste/SC">
 </div>
 
 <!-- ── FUNIL EDUCATIVO ─────────────────────────────── -->
@@ -840,15 +928,15 @@
       <p>Sou <strong>Erivelton Rossi</strong>, acadêmico de Direito na <strong>10ª fase</strong>, com dedicação a estudos jurídicos, organização documental e desenvolvimento de conteúdo informativo nas áreas administrativa e jurídica.</p>
       <p>Meu trabalho neste espaço tem foco em clareza, responsabilidade e boa organização de informações — facilitando a compreensão de pessoas que buscam orientação sobre temas documentais e administrativos.</p>
       <span class="badge-local">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        ACIOC HUB · Joaçaba/SC
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        Atendimento virtual · Herval d'Oeste/SC
       </span>
     </div>
 
     <div style="display:flex; flex-direction:column; gap:16px;">
       <div class="card">
-        <h4>Estrutura de trabalho</h4>
-        <p>Utilizo estrutura de trabalho no <strong>ACIOC HUB</strong> em Joaçaba/SC. Os atendimentos são realizados presencialmente ou por meio remoto, sempre com agendamento prévio.</p>
+        <h4>Formato de atendimento</h4>
+        <p>Os atendimentos são realizados em <strong>ambiente virtual</strong>, por videoconferência ou mensagem, sempre com agendamento prévio. Isso garante comodidade e agilidade independentemente de onde você esteja.</p>
       </div>
       <div class="card">
         <h4>Compromisso com a informação</h4>
@@ -986,7 +1074,7 @@
       <div class="footer-col">
         <h5>Erivelton Rossi</h5>
         <p>Acadêmico de Direito — 10ª fase</p>
-        <p>ACIOC HUB · Joaçaba/SC</p>
+        <p>Atendimento virtual · Herval d'Oeste/SC</p>
         <p style="margin-top:6px;">Este espaço tem caráter estritamente informativo e não constitui advocacia ou consultoria jurídica.</p>
       </div>
 
@@ -1016,6 +1104,10 @@
         <a href="#contato">Contato</a>
       </div>
     </div>
+
+    <p style="text-align:center; margin-top:20px; font-size:11px; color:rgba(255,255,255,0.25);">
+      Site desenvolvido com auxílio de <a href="https://claude.ai" target="_blank" style="color:rgba(255,255,255,0.35); text-decoration:none;">Claude (Anthropic)</a>
+    </p>
   </div>
 </footer>
 
