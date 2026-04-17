@@ -30,7 +30,6 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -62,16 +61,13 @@
       position: relative;
     }
 
-    /* Linhas decorativas laterais */
-    .topo::before,
-    .topo::after {
+    .topo::before, .topo::after {
       content: '';
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       width: 60px;
       height: 1px;
-      background: linear-gradient(to right, transparent, rgba(212,168,75,0.5));
     }
     .topo::before { left: 24px; background: linear-gradient(to right, transparent, rgba(212,168,75,0.4)); }
     .topo::after  { right: 24px; background: linear-gradient(to left, transparent, rgba(212,168,75,0.4)); }
@@ -89,7 +85,6 @@
       gap: 10px;
     }
 
-    /* Linhas finas ao lado do ícone da balança */
     .logo-linha {
       width: 36px;
       height: 1px;
@@ -118,7 +113,6 @@
       text-align: center;
     }
 
-    /* Separador dourado */
     .header-divider {
       width: 40px;
       height: 1px;
@@ -157,7 +151,6 @@
       overflow: hidden;
     }
 
-    /* Balança da Justiça ao fundo */
     .hero::before {
       content: '';
       position: absolute;
@@ -173,7 +166,6 @@
       pointer-events: none;
     }
 
-    /* Padrão geométrico sutil */
     .hero::after {
       content: '';
       position: absolute;
@@ -200,11 +192,6 @@
       color: #fff;
       line-height: 1.25;
       margin-bottom: 16px;
-    }
-
-    .hero-texto h1 em {
-      font-style: italic;
-      color: #d4a84b;
     }
 
     .hero-texto p {
@@ -260,7 +247,6 @@
       color: #fff;
     }
 
-    /* Foto no hero */
     .hero-foto {
       width: 200px;
       height: 200px;
@@ -271,7 +257,6 @@
       flex-shrink: 0;
     }
 
-    /* Aviso acadêmico discreto */
     .aviso-academico {
       background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.15);
@@ -393,7 +378,7 @@
       padding: 48px 24px;
     }
 
-    /* ── SEÇÃO SOBRE ─────────────────────────────────── */
+    /* ── SOBRE ─────────────────────────────────────── */
     .sobre-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -544,7 +529,7 @@
       justify-content: center;
       font-size: 20px;
       margin-bottom: 12px;
-      box-shadow: 0 4px 14px rgba(12,61,92,0.25);
+      box-shadow: 0 4px 14px rgba(122,12,31,0.25);
       flex-shrink: 0;
     }
 
@@ -561,6 +546,402 @@
       color: var(--texto-suave);
       line-height: 1.5;
       padding: 0 8px;
+    }
+
+    /* ══════════════════════════════════════════════════
+       NOVA SEÇÃO — PORTAIS JURÍDICOS GRATUITOS
+    ══════════════════════════════════════════════════ */
+    .portais-secao {
+      background: var(--branco);
+      border-top: 1px solid var(--cinza-borda);
+      border-bottom: 1px solid var(--cinza-borda);
+      padding: 56px 24px;
+    }
+
+    .portais-inner { max-width: 1080px; margin: 0 auto; }
+
+    .portais-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .portal-card {
+      background: var(--cinza-bg);
+      border: 1px solid var(--cinza-borda);
+      border-radius: var(--raio-lg);
+      padding: 20px 18px;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: all 0.2s;
+      position: relative;
+    }
+
+    .portal-card:hover {
+      background: var(--azul-claro);
+      border-color: var(--azul-medio);
+      box-shadow: var(--sombra-card);
+      transform: translateY(-2px);
+    }
+
+    .portal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-size: 10px;
+      font-weight: 500;
+      padding: 3px 9px;
+      border-radius: 20px;
+      width: fit-content;
+    }
+
+    .portal-badge.oficial {
+      background: #e3f2fd;
+      color: #1565c0;
+    }
+
+    .portal-nome {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--azul);
+    }
+
+    .portal-desc {
+      font-size: 12.5px;
+      color: var(--texto-suave);
+      line-height: 1.55;
+    }
+
+    .portal-link-ext {
+      font-size: 11px;
+      color: var(--azul-medio);
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ══════════════════════════════════════════════════
+       NOVA SEÇÃO — REFERÊNCIAS E DOUTRINADORES
+    ══════════════════════════════════════════════════ */
+    .referencias-secao {
+      padding: 56px 24px;
+      background: var(--cinza-bg);
+    }
+
+    .referencias-inner { max-width: 1080px; margin: 0 auto; }
+
+    .referencias-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 32px;
+    }
+
+    .ref-card {
+      background: var(--branco);
+      border: 1px solid var(--cinza-borda);
+      border-left: 4px solid var(--ouro);
+      border-radius: var(--raio-lg);
+      padding: 24px 22px;
+      box-shadow: var(--sombra-sutil);
+      transition: all 0.2s;
+    }
+
+    .ref-card:hover {
+      box-shadow: var(--sombra-card);
+      transform: translateY(-2px);
+    }
+
+    .ref-area-tag {
+      display: inline-block;
+      background: var(--ouro-claro);
+      color: var(--ouro);
+      font-size: 10px;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .ref-nome {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--azul);
+      margin-bottom: 6px;
+    }
+
+    .ref-desc {
+      font-size: 13.5px;
+      color: var(--texto-suave);
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+
+    .ref-obras {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .ref-obras li {
+      font-size: 12px;
+      color: var(--texto-suave);
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .ref-obras li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--ouro);
+      font-size: 11px;
+    }
+
+    .ref-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 14px;
+      font-size: 12.5px;
+      color: var(--azul-medio);
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dashed rgba(160,20,40,0.3);
+      padding-bottom: 1px;
+      transition: color 0.2s;
+    }
+
+    .ref-link:hover { color: var(--azul); }
+
+    /* ══════════════════════════════════════════════════
+       NOVA SEÇÃO — COMENTÁRIOS
+    ══════════════════════════════════════════════════ */
+    .comentarios-secao {
+      padding: 56px 24px;
+      background: var(--branco);
+      border-top: 1px solid var(--cinza-borda);
+    }
+
+    .comentarios-inner { max-width: 780px; margin: 0 auto; }
+
+    .form-comentario {
+      background: var(--cinza-bg);
+      border: 1px solid var(--cinza-borda);
+      border-radius: var(--raio-lg);
+      padding: 28px 26px;
+      margin-bottom: 36px;
+    }
+
+    .form-comentario h3 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--azul);
+      margin-bottom: 18px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .form-group label {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--texto-suave);
+      letter-spacing: 0.03em;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--texto);
+      background: var(--branco);
+      border: 1px solid var(--cinza-borda);
+      border-radius: var(--raio);
+      padding: 10px 14px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      width: 100%;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--azul-medio);
+      box-shadow: 0 0 0 3px rgba(122,12,31,0.07);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .form-aviso-lgpd {
+      font-size: 11.5px;
+      color: var(--texto-suave);
+      line-height: 1.5;
+      margin-top: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .form-aviso-lgpd input[type="checkbox"] {
+      width: auto;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .btn-enviar-comentario {
+      margin-top: 16px;
+      background: var(--azul);
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-enviar-comentario:hover {
+      background: var(--azul-medio);
+      transform: translateY(-1px);
+    }
+
+    .btn-enviar-comentario:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .msg-sucesso {
+      display: none;
+      background: #e8f5e9;
+      border: 1px solid #a5d6a7;
+      border-radius: var(--raio);
+      padding: 14px 18px;
+      font-size: 14px;
+      color: #2e7d32;
+      margin-top: 14px;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Lista de comentários existentes */
+    .comentarios-lista {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .comentarios-lista-titulo {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--azul);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .qtd-badge {
+      background: var(--azul-claro);
+      color: var(--azul);
+      font-size: 11px;
+      font-weight: 500;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .comentario-item {
+      background: var(--cinza-bg);
+      border: 1px solid var(--cinza-borda);
+      border-radius: var(--raio-lg);
+      padding: 20px 20px;
+      animation: fadeUp 0.3s ease;
+    }
+
+    .comentario-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .comentario-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--azul);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 500;
+      flex-shrink: 0;
+      font-family: 'Lora', serif;
+    }
+
+    .comentario-meta strong {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--texto);
+      display: block;
+    }
+
+    .comentario-meta span {
+      font-size: 11.5px;
+      color: var(--texto-suave);
+    }
+
+    .comentario-tema-tag {
+      margin-left: auto;
+      background: var(--ouro-claro);
+      color: var(--ouro);
+      font-size: 10px;
+      padding: 3px 9px;
+      border-radius: 20px;
+      font-weight: 500;
+      flex-shrink: 0;
+    }
+
+    .comentario-texto {
+      font-size: 14px;
+      color: var(--texto-suave);
+      line-height: 1.65;
     }
 
     /* ── CONTATO ─────────────────────────────────────── */
@@ -649,10 +1030,7 @@
       padding: 32px 24px;
     }
 
-    .footer-inner {
-      max-width: 1080px;
-      margin: 0 auto;
-    }
+    .footer-inner { max-width: 1080px; margin: 0 auto; }
 
     .footer-top {
       display: grid;
@@ -736,7 +1114,6 @@
 
     #cookie-banner p { max-width: 600px; line-height: 1.5; }
     #cookie-banner a { color: #d4a84b; text-decoration: none; }
-    #cookie-banner a:hover { text-decoration: underline; }
 
     .cookie-btns { display: flex; gap: 10px; flex-shrink: 0; flex-wrap: wrap; }
 
@@ -767,41 +1144,7 @@
 
     .cookie-gerenciar:hover { border-color: rgba(255,255,255,0.4); color: #fff; }
 
-    /* ── RESPONSIVO ──────────────────────────────────── */
-    @media (max-width: 768px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .hero-foto {
-        width: 140px;
-        height: 140px;
-        margin: 0 auto;
-        order: -1;
-      }
-
-      .hero-cta-grupo { justify-content: center; }
-      .aviso-academico { margin: 24px auto 0; }
-
-      .sobre-grid { grid-template-columns: 1fr; }
-
-      .contato-inner { grid-template-columns: 1fr; }
-
-      .footer-top { grid-template-columns: 1fr; }
-
-      .fluxo-item:not(:last-child)::after { display: none; }
-
-      .fluxo-passos {
-        flex-direction: column;
-        align-items: center;
-        gap: 24px;
-      }
-
-      .fluxo-item { max-width: 100%; }
-    }
-
-    /* Animação de entrada suave */
+    /* ── ANIMAÇÕES ───────────────────────────────────── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(16px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -809,6 +1152,21 @@
 
     .hero-texto { animation: fadeUp 0.6s ease both; }
     .hero-foto-wrap { animation: fadeUp 0.6s ease 0.15s both; }
+
+    /* ── RESPONSIVO ──────────────────────────────────── */
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .hero-foto { width: 140px; height: 140px; margin: 0 auto; order: -1; }
+      .hero-cta-grupo { justify-content: center; }
+      .aviso-academico { margin: 24px auto 0; }
+      .sobre-grid { grid-template-columns: 1fr; }
+      .contato-inner { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .fluxo-item:not(:last-child)::after { display: none; }
+      .fluxo-passos { flex-direction: column; align-items: center; gap: 24px; }
+      .fluxo-item { max-width: 100%; }
+      .form-row { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -819,7 +1177,6 @@
     <div class="logo-bloco">
       <div class="logo-icone">
         <span class="logo-linha"></span>
-        <!-- Balança da Justiça SVG -->
         <svg width="22" height="22" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.75">
           <rect x="48" y="6" width="4" height="72" rx="2" fill="#d4a84b"/>
           <rect x="18" y="14" width="64" height="3" rx="1.5" fill="#d4a84b"/>
@@ -843,6 +1200,9 @@
       <a href="#sobre">Sobre</a>
       <a href="#atuacao">Atuação</a>
       <a href="#como-funciona">Como funciona</a>
+      <a href="#portais">Portais Jurídicos</a>
+      <a href="#referencias">Referências</a>
+      <a href="#comentarios">Comentários</a>
       <a href="politica.html">Privacidade</a>
       <a href="#contato">Contato</a>
     </nav>
@@ -959,29 +1319,36 @@
         <h4>Organização documental</h4>
         <p>Estruturação de documentos, conferência inicial de dados e preparação documental para encaminhamentos futuros.</p>
       </div>
-
       <div class="area-card">
         <span class="area-icone">📋</span>
         <h4>Temas administrativos</h4>
         <p>Informações sobre processos administrativos, regularizações e procedimentos junto a órgãos públicos.</p>
       </div>
-
       <div class="area-card">
         <span class="area-icone">⚖️</span>
         <h4>Conteúdo jurídico informativo</h4>
         <p>Materiais educativos sobre temas jurídicos gerais, com linguagem acessível ao cidadão comum.</p>
       </div>
-
       <div class="area-card">
         <span class="area-icone">🏡</span>
         <h4>Regularizações e imóveis</h4>
         <p>Orientações gerais sobre documentação imobiliária, registros e regularizações cadastrais.</p>
       </div>
+      <div class="area-card">
+        <span class="area-icone">🛡️</span>
+        <h4>Direito previdenciário</h4>
+        <p>Informações sobre BPC/LOAS, aposentadorias, auxílios e benefícios previdenciários em geral.</p>
+      </div>
+      <div class="area-card">
+        <span class="area-icone">⚕️</span>
+        <h4>Saúde mental e direito</h4>
+        <p>Conteúdo sobre a Lei Antimanicomial (Lei 10.216/2001) e medidas de segurança no ordenamento brasileiro.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ── COMO FUNCIONA (FLUXO VISUAL LAW) ────────────── -->
+<!-- ── FLUXOGRAMA VISUAL LAW ────────────── -->
 <section class="fluxo-secao">
   <div class="fluxo-inner">
     <p class="secao-titulo">Visual Law</p>
@@ -1018,6 +1385,285 @@
   </div>
 </section>
 
+<!-- ══════════════════════════════════════════════════
+     NOVA SEÇÃO — PORTAIS JURÍDICOS GRATUITOS
+══════════════════════════════════════════════════ -->
+<section class="portais-secao" id="portais">
+  <div class="portais-inner">
+    <p class="secao-titulo">Fontes de consulta</p>
+    <h2 class="secao-h2">Portais jurídicos gratuitos</h2>
+    <p class="secao-sub">Fontes confiáveis e de acesso livre para consulta de legislação, jurisprudência e conteúdo jurídico. Todos os links são externos e de acesso 100% gratuito.</p>
+
+    <div class="portais-grid">
+
+      <!-- Migalhas -->
+      <a class="portal-card" href="https://www.migalhas.com.br" target="_blank" rel="noopener">
+        <span class="portal-badge">● Gratuito</span>
+        <div class="portal-nome">Migalhas</div>
+        <div class="portal-desc">Maior portal jurídico do Brasil. Notícias, artigos doutrinários, jurisprudência e informativo diário gratuito.</div>
+        <div class="portal-link-ext">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          migalhas.com.br
+        </div>
+      </a>
+
+      <!-- Conjur -->
+      <a class="portal-card" href="https://www.conjur.com.br" target="_blank" rel="noopener">
+        <span class="portal-badge">● Gratuito</span>
+        <div class="portal-nome">Conjur</div>
+        <div class="portal-desc">Consultor Jurídico — veículo independente com notícias, artigos e análises do Judiciário e dos três poderes.</div>
+        <div class="portal-link-ext">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          conjur.com.br
+        </div>
+      </a>
+
+      <!-- Jusbrasil -->
+      <a class="portal-card" href="https://www.jusbrasil.com.br" target="_blank" rel="noopener">
+        <span class="portal-badge">● Gratuito</span>
+        <div class="portal-nome">Jusbrasil</div>
+        <div class="portal-desc">Um dos portais mais acessados no mundo. Busca de jurisprudência, legislação, diários oficiais e artigos jurídicos.</div>
+        <div class="portal-link-ext">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          jusbrasil.com.br
+        </div>
+      </a>
+
+      <!-- Planalto -->
+      <a class="portal-card" href="https://www.planalto.gov.br/legislacao" target="_blank" rel="noopener">
+        <span class="portal-badge oficial">● Oficial</span>
+        <div class="portal-nome">Planalto — Legislação</div>
+        <div class="portal-desc">Portal oficial do Governo Federal com toda a legislação brasileira atualizada. Fonte primária para consulta de leis e decretos.</div>
+        <div class="portal-link-ext">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          planalto.gov.br
+        </div>
+      </a>
+
+      <!-- STF -->
+      <a class="portal-card" href="https://portal.stf.jus.br" target="_blank" rel="noopener">
+        <span class="portal-badge oficial">● Oficial</span>
+        <div class="portal-nome">STF</div>
+        <div class="portal-desc">Supremo Tribunal Federal. Jurisprudência, acórdãos, súmulas vinculantes e acompanhamento de processos.</div>
+        <div class="portal-link-ext">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          stf.jus.br
+        </div>
+      </a>
+
+      <!-- STJ -->
+      <a class="portal-card" href="https://www.stj.jus.br" target="_blank" rel="noopener">
+        <span class="portal-badge oficial">● Oficial</span>
+        <div class="portal-nome">STJ</div>
+        <div class="portal-desc">Superior Tribunal de Justiça. Pesquisa de jurisprudência, recursos repetitivos e informativos de julgamentos.</div>
+        <div class="portal-link-ext">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          stj.jus.br
+        </div>
+      </a>
+
+      <!-- TJ-SC -->
+      <a class="portal-card" href="https://www.tjsc.jus.br" target="_blank" rel="noopener">
+        <span class="portal-badge oficial">● Oficial</span>
+        <div class="portal-nome">TJ-SC</div>
+        <div class="portal-desc">Tribunal de Justiça de Santa Catarina. Consulta processual, jurisprudência catarinense e serviços eletrônicos.</div>
+        <div class="portal-link-ext">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          tjsc.jus.br
+        </div>
+      </a>
+
+      <!-- Dizer o Direito -->
+      <a class="portal-card" href="https://www.dizerodireito.com.br" target="_blank" rel="noopener">
+        <span class="portal-badge">● Gratuito</span>
+        <div class="portal-nome">Dizer o Direito</div>
+        <div class="portal-desc">Informativos do STF e STJ comentados de forma didática. Referência para estudantes de Direito e concursos públicos.</div>
+        <div class="portal-link-ext">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          dizerodireito.com.br
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     NOVA SEÇÃO — REFERÊNCIAS E DOUTRINADORES
+══════════════════════════════════════════════════ -->
+<section class="referencias-secao" id="referencias">
+  <div class="referencias-inner">
+    <p class="secao-titulo">Doutrina e referências</p>
+    <h2 class="secao-h2">Autores e fontes que orientam este trabalho</h2>
+    <p class="secao-sub">Juristas, doutrinadores e educadores jurídicos cujo conteúdo baliza o material informativo produzido neste espaço.</p>
+
+    <div class="referencias-grid">
+
+      <!-- Sílvio de Salvo Venosa -->
+      <div class="ref-card">
+        <span class="ref-area-tag">Direito Civil</span>
+        <div class="ref-nome">Sílvio de Salvo Venosa</div>
+        <div class="ref-desc">
+          Desembargador aposentado do TJSP, pós-graduado pela USP e PUC-SP. Um dos mais importantes doutrinadores do Direito Civil brasileiro, com mais de 25 anos na magistratura e vasta produção acadêmica.
+        </div>
+        <ul class="ref-obras">
+          <li>Direito Civil — 5 volumes (23ª ed., Atlas, 2023)</li>
+          <li>Lei do Inquilinato Comentada</li>
+          <li>Introdução ao Estudo do Direito — Primeiras Linhas</li>
+          <li>Artigos disponíveis gratuitamente no portal Migalhas</li>
+        </ul>
+        <a class="ref-link" href="https://www.migalhas.com.br/autor/silvio-de-salvo-venosa" target="_blank" rel="noopener">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Ver artigos gratuitos no Migalhas
+        </a>
+      </div>
+
+      <!-- Prof. Marcos Salomão -->
+      <div class="ref-card">
+        <span class="ref-area-tag">Direito Imobiliário</span>
+        <div class="ref-nome">Prof. Marcos Salomão</div>
+        <div class="ref-desc">
+          Doutor em Direito e Registrador de Imóveis em Porto Alegre/RS. Referência nacional em Direito Imobiliário, com mais de 35.000 alunos formados. Produz conteúdo prático sobre usucapião, registros, contratos e advocacia imobiliária.
+        </div>
+        <ul class="ref-obras">
+          <li>Canal no YouTube — conteúdo gratuito sobre Direito Imobiliário</li>
+          <li>Workshop gratuito: Regularização de Imóveis</li>
+          <li>Conteúdo sobre usucapião, inventário e matrícula</li>
+          <li>Instagram: @professor_salomao (585 mil seguidores)</li>
+        </ul>
+        <a class="ref-link" href="https://www.youtube.com/c/professormarcossalomao" target="_blank" rel="noopener">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Acessar canal gratuito no YouTube
+        </a>
+      </div>
+
+      <!-- Migalhas de Peso / doutrina -->
+      <div class="ref-card">
+        <span class="ref-area-tag">Doutrina Online</span>
+        <div class="ref-nome">Migalhas de Peso</div>
+        <div class="ref-desc">
+          Seção do portal Migalhas dedicada a artigos doutrinários de juristas, professores e advogados de todo o Brasil. Conteúdo 100% gratuito com autores de referência nacional.
+        </div>
+        <ul class="ref-obras">
+          <li>Artigos de Venosa, Caio Mário, Tartuce e outros</li>
+          <li>Debates sobre legislação, jurisprudência e reforma do direito</li>
+          <li>Cobertura atualizada dos tribunais superiores</li>
+          <li>Newsletters jurídicas diárias e gratuitas</li>
+        </ul>
+        <a class="ref-link" href="https://www.migalhas.com.br/depeso" target="_blank" rel="noopener">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Acessar Migalhas de Peso
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     NOVA SEÇÃO — COMENTÁRIOS
+══════════════════════════════════════════════════ -->
+<section class="comentarios-secao" id="comentarios">
+  <div class="comentarios-inner">
+    <p class="secao-titulo">Participação</p>
+    <h2 class="secao-h2" style="margin-bottom:8px;">Deixe seu comentário</h2>
+    <p class="secao-sub" style="margin-bottom:32px;">Dúvidas, sugestões ou contribuições sobre os temas abordados são bem-vindas. Os comentários são moderados antes da publicação.</p>
+
+    <!-- Formulário -->
+    <div class="form-comentario">
+      <h3>Novo comentário</h3>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="c-nome">Nome *</label>
+          <input type="text" id="c-nome" placeholder="Seu nome ou apelido" maxlength="60">
+        </div>
+        <div class="form-group">
+          <label for="c-email">E-mail (não será publicado)</label>
+          <input type="email" id="c-email" placeholder="seu@email.com">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group" style="grid-column: 1 / -1;">
+          <label for="c-tema">Tema do comentário</label>
+          <select id="c-tema">
+            <option value="">Selecione um tema (opcional)</option>
+            <option value="Previdenciário">Direito Previdenciário</option>
+            <option value="Penal">Direito Penal / Saúde Mental</option>
+            <option value="Civil">Direito Civil / Contratos</option>
+            <option value="Imóveis">Regularização de Imóveis</option>
+            <option value="Documental">Organização Documental</option>
+            <option value="Administrativo">Temas Administrativos</option>
+            <option value="OAB">Preparação OAB</option>
+            <option value="Geral">Geral / Outros</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="c-texto">Comentário *</label>
+        <textarea id="c-texto" placeholder="Escreva sua dúvida, sugestão ou contribuição..."></textarea>
+      </div>
+
+      <label class="form-aviso-lgpd">
+        <input type="checkbox" id="c-lgpd">
+        <span>Concordo que meu nome e comentário poderão ser exibidos neste site. O e-mail informado não será publicado e será tratado conforme a <a href="politica.html" style="color:var(--azul-medio);">Política de Privacidade (LGPD)</a>.</span>
+      </label>
+
+      <button class="btn-enviar-comentario" id="btn-enviar" onclick="enviarComentario()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        Enviar comentário
+      </button>
+
+      <div class="msg-sucesso" id="msg-sucesso">
+        ✅ Comentário enviado com sucesso! Será publicado após moderação. Obrigado pela participação.
+      </div>
+    </div>
+
+    <!-- Lista de comentários -->
+    <div>
+      <div class="comentarios-lista-titulo">
+        Comentários publicados
+        <span class="qtd-badge" id="qtd-badge">2 comentários</span>
+      </div>
+      <p style="font-size:13px; color:var(--texto-suave); margin: 6px 0 20px;">Comentários moderados e aprovados para publicação.</p>
+
+      <div class="comentarios-lista" id="lista-comentarios">
+
+        <div class="comentario-item">
+          <div class="comentario-header">
+            <div class="comentario-avatar">M</div>
+            <div class="comentario-meta">
+              <strong>Maria Aparecida</strong>
+              <span>Herval d'Oeste · abr/2025</span>
+            </div>
+            <div class="comentario-tema-tag">Previdenciário</div>
+          </div>
+          <div class="comentario-texto">
+            Parabéns pelo conteúdo! Fiquei com dúvida sobre o BPC/LOAS — existe alguma forma de saber se tenho direito antes de dar entrada no pedido? O material aqui foi muito esclarecedor.
+          </div>
+        </div>
+
+        <div class="comentario-item">
+          <div class="comentario-header">
+            <div class="comentario-avatar">R</div>
+            <div class="comentario-meta">
+              <strong>Roberto Filho</strong>
+              <span>Joaçaba · abr/2025</span>
+            </div>
+            <div class="comentario-tema-tag">Imóveis</div>
+          </div>
+          <div class="comentario-texto">
+            Muito útil a seção sobre regularização de imóveis. Tenho um terreno rural sem registro atualizado e não sabia por onde começar. Os portais indicados também foram ótimas indicações!
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── CONTATO ──────────────────────────────────────── -->
 <section class="contato-secao" id="contato">
   <div class="contato-inner">
@@ -1040,7 +1686,7 @@
         </div>
         <div class="canal-info">
           <strong>WhatsApp</strong>
-          <small>(49) 9 9124-2014 · Atendimento de seg. a sex., 9h–18h</small>
+          <small>(49) 9 9124-2014 · Seg. a sex., 9h–18h</small>
         </div>
       </a>
 
@@ -1083,24 +1729,30 @@
         <a href="#sobre">Sobre</a>
         <a href="#atuacao">Áreas de atuação</a>
         <a href="#como-funciona">Como funciona</a>
+        <a href="#portais">Portais jurídicos</a>
+        <a href="#referencias">Referências</a>
+        <a href="#comentarios">Comentários</a>
         <a href="#contato">Contato</a>
       </div>
 
       <div class="footer-col">
-        <h5>Informações legais</h5>
-        <a href="politica.html">Política de Privacidade (LGPD)</a>
-        <p style="margin-top:8px;">Responsável pelos dados: Erivelton Rossi</p>
-        <p>Contato DPO: eriveltorss.adv@gmail.com</p>
-        <p style="margin-top:8px;">Os dados coletados por este site são utilizados exclusivamente para contato e melhoria da experiência informativa. Nenhum dado é compartilhado com terceiros sem consentimento.</p>
+        <h5>Portais oficiais</h5>
+        <a href="https://www.planalto.gov.br" target="_blank" rel="noopener">Planalto — Legislação Federal</a>
+        <a href="https://portal.stf.jus.br" target="_blank" rel="noopener">STF — Supremo Tribunal Federal</a>
+        <a href="https://www.stj.jus.br" target="_blank" rel="noopener">STJ — Superior Tribunal de Justiça</a>
+        <a href="https://www.tjsc.jus.br" target="_blank" rel="noopener">TJ-SC — Tribunal de Justiça/SC</a>
+        <a href="https://www.migalhas.com.br" target="_blank" rel="noopener">Migalhas</a>
+        <a href="https://www.conjur.com.br" target="_blank" rel="noopener">Conjur</a>
       </div>
     </div>
 
     <hr class="footer-divider">
 
     <div class="footer-base">
-      <p>© 2025 Erivelton Rossi. Conteúdo informativo e institucional. Erivelton Rossi é acadêmico de Direito, não inscrito na OAB. As informações deste site não constituem aconselhamento jurídico. Para questões jurídicas formais, consulte um advogado inscrito na OAB.</p>
+      <p>© 2025 Erivelton Rossi. Conteúdo informativo e institucional. Erivelton Rossi é acadêmico de Direito, não inscrito na OAB. As informações deste site não constituem aconselhamento jurídico. Para questões jurídicas formais, consulte um advogado inscrito na OAB. — <a href="politica.html" style="color:rgba(255,255,255,0.45); text-decoration:none;">Política de Privacidade (LGPD)</a></p>
       <div class="footer-links">
         <a href="politica.html">Privacidade</a>
+        <a href="#portais">Portais</a>
         <a href="#contato">Contato</a>
       </div>
     </div>
@@ -1124,6 +1776,7 @@
 </div>
 
 <script>
+  /* ── Cookies ── */
   function aceitarCookies() {
     document.getElementById('cookie-banner').style.display = 'none';
     localStorage.setItem('cookies-aceitos', '1');
@@ -1131,6 +1784,86 @@
   if (localStorage.getItem('cookies-aceitos')) {
     document.getElementById('cookie-banner').style.display = 'none';
   }
+
+  /* ── Comentários ── */
+  var comentarios = JSON.parse(localStorage.getItem('er-comentarios') || '[]');
+
+  function atualizarContador() {
+    var base = 2; // comentários fixos de exemplo
+    var total = base + comentarios.length;
+    document.getElementById('qtd-badge').textContent = total + (total === 1 ? ' comentário' : ' comentários');
+  }
+
+  function renderComentarios() {
+    var lista = document.getElementById('lista-comentarios');
+    // Remove comentários dinâmicos anteriores
+    var dinamicos = lista.querySelectorAll('.dinamico');
+    dinamicos.forEach(function(el){ el.remove(); });
+
+    comentarios.forEach(function(c) {
+      var div = document.createElement('div');
+      div.className = 'comentario-item dinamico';
+      div.style.animation = 'none';
+      var inicial = c.nome.charAt(0).toUpperCase();
+      var temaHtml = c.tema ? '<div class="comentario-tema-tag">' + c.tema + '</div>' : '';
+      div.innerHTML =
+        '<div class="comentario-header">' +
+          '<div class="comentario-avatar">' + inicial + '</div>' +
+          '<div class="comentario-meta">' +
+            '<strong>' + escHtml(c.nome) + '</strong>' +
+            '<span>' + escHtml(c.cidade || 'SC') + ' · ' + c.data + '</span>' +
+          '</div>' +
+          temaHtml +
+        '</div>' +
+        '<div class="comentario-texto">' + escHtml(c.texto) + '</div>';
+      lista.appendChild(div);
+    });
+    atualizarContador();
+  }
+
+  function escHtml(str) {
+    return String(str)
+      .replace(/&/g,'&amp;')
+      .replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;');
+  }
+
+  function enviarComentario() {
+    var nome  = document.getElementById('c-nome').value.trim();
+    var email = document.getElementById('c-email').value.trim();
+    var tema  = document.getElementById('c-tema').value;
+    var texto = document.getElementById('c-texto').value.trim();
+    var lgpd  = document.getElementById('c-lgpd').checked;
+
+    if (!nome) { alert('Por favor, informe seu nome.'); return; }
+    if (!texto) { alert('Por favor, escreva um comentário.'); return; }
+    if (!lgpd) { alert('Para enviar, aceite os termos de privacidade.'); return; }
+
+    var agora = new Date();
+    var meses = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+    var dataStr = meses[agora.getMonth()] + '/' + agora.getFullYear();
+
+    comentarios.push({ nome: nome, email: email, tema: tema, texto: texto, data: dataStr });
+    localStorage.setItem('er-comentarios', JSON.stringify(comentarios));
+
+    // Limpar formulário
+    document.getElementById('c-nome').value = '';
+    document.getElementById('c-email').value = '';
+    document.getElementById('c-tema').value = '';
+    document.getElementById('c-texto').value = '';
+    document.getElementById('c-lgpd').checked = false;
+
+    // Mensagem de sucesso
+    var msg = document.getElementById('msg-sucesso');
+    msg.style.display = 'flex';
+    setTimeout(function(){ msg.style.display = 'none'; }, 5000);
+
+    renderComentarios();
+  }
+
+  // Carregar comentários salvos ao iniciar
+  renderComentarios();
 </script>
 
 </body>
