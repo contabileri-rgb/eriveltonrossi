@@ -1530,6 +1530,55 @@
 
     .footer-links a:hover { color: rgba(255,255,255,0.75); }
 
+    /* ── FAIXA AUTORAL FOOTER ──────────────────────── */
+    .footer-autoral {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: rgba(196,154,42,0.07);
+      border: 1px solid rgba(196,154,42,0.15);
+      border-radius: var(--raio-lg);
+      padding: 18px 22px;
+      margin-bottom: 0;
+    }
+
+    .footer-autoral-icone {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: rgba(196,154,42,0.5);
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .footer-autoral-texto {
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.65;
+      font-weight: 300;
+      flex: 1;
+    }
+
+    .footer-autoral-texto strong {
+      color: rgba(255,255,255,0.65);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .footer-autoral-link {
+      flex-shrink: 0;
+      font-size: 11.5px;
+      color: rgba(196,154,42,0.7);
+      text-decoration: none;
+      white-space: nowrap;
+      align-self: center;
+      transition: color 0.2s;
+      font-weight: 500;
+    }
+
+    .footer-autoral-link:hover { color: var(--ouro); }
+
     /* ── COOKIE BANNER ─────────────────────────────── */
     #cookie-banner {
       position: fixed;
@@ -2239,10 +2288,23 @@
 
     <hr class="footer-divider">
 
+    <!-- Faixa de proteção autoral -->
+    <div class="footer-autoral">
+      <div class="footer-autoral-icone">©</div>
+      <div class="footer-autoral-texto">
+        <strong>© 2025 Erivelton Rossi — Todos os direitos reservados.</strong>
+        O conteúdo textual, estrutura, composição visual e código-fonte deste site são obras intelectuais protegidas pela <strong>Lei 9.610/98</strong> (Direitos Autorais) e pela <strong>Lei 9.609/98</strong> (Software). É vedada a reprodução total ou parcial sem autorização prévia e expressa do autor.
+      </div>
+      <a href="direitos.html" class="footer-autoral-link">Ver declaração completa →</a>
+    </div>
+
+    <hr class="footer-divider" style="margin-top:20px;">
+
     <div class="footer-base">
-      <p>© 2025 Erivelton Rossi. Conteúdo informativo e institucional. Erivelton Rossi é acadêmico de Direito, não inscrito na OAB. As informações deste site não constituem aconselhamento jurídico. Para questões jurídicas formais, consulte um advogado inscrito na OAB. — <a href="politica.html" style="color:rgba(255,255,255,0.35); text-decoration:none;">Política de Privacidade (LGPD)</a></p>
+      <p>Erivelton Rossi é acadêmico de Direito, não inscrito na OAB. As informações deste site não constituem aconselhamento jurídico. Para questões jurídicas formais, consulte um advogado inscrito na OAB. — <a href="politica.html" style="color:rgba(255,255,255,0.35); text-decoration:none;">Política de Privacidade (LGPD)</a></p>
       <div class="footer-links">
         <a href="politica.html">Privacidade</a>
+        <a href="direitos.html">Direitos Autorais</a>
         <a href="#portais">Portais</a>
         <a href="#contato">Contato</a>
       </div>
