@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Direitos Autorais — Erivelton Rossi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Erivelton Rossi">
+  <meta name="copyright" content="© 2025 Erivelton Rossi. Todos os direitos reservados.">
+  <meta name="rights" content="Reprodução proibida sem autorização prévia e expressa do autor. Lei 9.610/98.">
+  <meta name="description" content="Declaração de direitos autorais e propriedade intelectual do site eriveltonrossi.com.br. Lei 9.610/98 e Lei 9.609/98.">
+  <link rel="canonical" href="https://www.eriveltonrossi.com.br/direitos.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --vermelho:      #7a0c1f;
+      --vermelho-mid:  #9e1228;
+      --vermelho-deep: #4d0712;
+      --ouro:          #c49a2a;
+      --ouro-claro:    #f7eed8;
+      --branco:        #ffffff;
+      --off-white:     #faf8f6;
+      --cinza-bg:      #f4f1ef;
+      --cinza-borda:   #e4ddd8;
+      --texto:         #1a1210;
+      --texto-mid:     #5a3d44;
+      --texto-suave:   #8a6b72;
+      --raio:          10px;
+      --raio-lg:       18px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Outfit', system-ui, sans-serif;
+      color: var(--texto);
+      background: var(--off-white);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: rgba(77,7,18,0.97);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(196,154,42,0.15);
+      padding: 16px 28px 12px;
+    }
+
+    .topo {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-nome {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+    }
+
+    .voltar-link {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+
+    .voltar-link:hover { color: var(--ouro); }
+
+    /* ── HERO DA PÁGINA ── */
+    .pagina-hero {
+      background: linear-gradient(145deg, #3d060f 0%, #7a0c1f 60%, #9e1228 100%);
+      padding: 56px 28px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pagina-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+
+    .pagina-hero-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+
+    .pagina-tag {
+      display: inline-block;
+      background: rgba(196,154,42,0.15);
+      border: 1px solid rgba(196,154,42,0.3);
+      color: var(--ouro);
+      font-size: 10.5px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+
+    .pagina-hero h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .pagina-hero p {
+      color: rgba(255,255,255,0.6);
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    .pagina-data {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 999px;
+      padding: 7px 18px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      font-weight: 300;
+    }
+
+    /* ── CONTAINER ── */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 56px 28px 80px;
+    }
+
+    /* ── CARDS DE PROTEÇÃO ── */
+    .protecao-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      margin-bottom: 56px;
+    }
+
+    .protecao-card {
+      background: var(--branco);
+      border: 1px solid var(--cinza-borda);
+      border-top: 3px solid var(--ouro);
+      border-radius: var(--raio-lg);
+      padding: 24px 22px;
+      box-shadow: 0 2px 16px rgba(122,12,31,0.07);
+    }
+
+    .protecao-card .icone {
+      font-size: 26px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .protecao-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--vermelho);
+      margin-bottom: 8px;
+    }
+
+    .protecao-card p {
+      font-size: 13.5px;
+      color: var(--texto-mid);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    .lei-badge {
+      display: inline-block;
+      background: var(--ouro-claro);
+      color: #7a5800;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-top: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ── SEÇÕES DE TEXTO ── */
+    .secao-dir {
+      margin-bottom: 44px;
+    }
+
+    .secao-dir-titulo {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--vermelho);
+      margin-bottom: 6px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--cinza-borda);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .secao-dir-titulo span {
+      width: 32px; height: 32px;
+      background: var(--vermelho);
+      color: #fff;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .secao-dir p {
+      font-size: 14.5px;
+      color: var(--texto-mid);
+      line-height: 1.8;
+      font-weight: 300;
+      margin-top: 14px;
+    }
+
+    .secao-dir p strong {
+      color: var(--texto);
+      font-weight: 500;
+    }
+
+    /* ── LISTA DE PROTEÇÕES ── */
+    .lista-dir {
+      list-style: none;
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .lista-dir li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--texto-mid);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    .lista-dir li::before {
+      content: '§';
+      color: var(--ouro);
+      font-weight: 600;
+      font-size: 14px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── VEDAÇÕES ── */
+    .vedacoes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .vedacao-item {
+      background: #fff5f5;
+      border: 1px solid rgba(122,12,31,0.12);
+      border-left: 3px solid var(--vermelho);
+      border-radius: var(--raio);
+      padding: 14px 16px;
+      font-size: 13.5px;
+      color: var(--texto-mid);
+      line-height: 1.55;
+      font-weight: 300;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .vedacao-item::before {
+      content: '✕';
+      color: var(--vermelho);
+      font-size: 12px;
+      font-weight: 600;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── PERMISSÕES ── */
+    .permissao-item {
+      background: #f0faf0;
+      border: 1px solid rgba(46,125,50,0.15);
+      border-left: 3px solid #2e7d32;
+      border-radius: var(--raio);
+      padding: 14px 16px;
+      font-size: 13.5px;
+      color: var(--texto-mid);
+      line-height: 1.55;
+      font-weight: 300;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .permissao-item::before {
+      content: '✓';
+      color: #2e7d32;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── DECLARAÇÃO FORMAL ── */
+    .declaracao-formal {
+      background: linear-gradient(135deg, #3d060f, #7a0c1f);
+      border-radius: var(--raio-lg);
+      padding: 40px 36px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      margin-top: 48px;
+    }
+
+    .declaracao-formal::before {
+      content: '©';
+      position: absolute;
+      right: 24px;
+      top: -10px;
+      font-family: 'Playfair Display', serif;
+      font-size: 140px;
+      color: rgba(196,154,42,0.08);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .declaracao-formal h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .declaracao-formal p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.8;
+      font-weight: 300;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .declaracao-formal p:last-of-type { margin-bottom: 0; }
+
+    .declaracao-formal strong { color: rgba(255,255,255,0.9); font-weight: 500; }
+
+    .declaracao-assinatura {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .declaracao-assinatura-nome {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-style: italic;
+      color: var(--ouro);
+    }
+
+    .declaracao-assinatura-dados {
+      font-size: 11.5px;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.6;
+      font-weight: 300;
+      text-align: right;
+    }
+
+    /* ── COMO REPORTAR ── */
+    .reportar-box {
+      background: var(--branco);
+      border: 1px solid var(--cinza-borda);
+      border-radius: var(--raio-lg);
+      padding: 28px 28px;
+      margin-top: 32px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .reportar-icone {
+      width: 48px; height: 48px;
+      background: var(--ouro-claro);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .reportar-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--vermelho);
+      margin-bottom: 8px;
+    }
+
+    .reportar-box p {
+      font-size: 14px;
+      color: var(--texto-mid);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .reportar-box a {
+      color: var(--vermelho-mid);
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .reportar-box a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #280409;
+      padding: 28px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover { color: rgba(255,255,255,0.75); }
+
+    @media (max-width: 768px) {
+      .topo { flex-direction: column; gap: 10px; text-align: center; }
+      .declaracao-assinatura { flex-direction: column; align-items: flex-start; }
+      .declaracao-assinatura-dados { text-align: left; }
+      .reportar-box { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="topo">
+    <a href="index.html" class="logo-nome">Erivelton Rossi</a>
+    <a href="index.html" class="voltar-link">
+      ← Voltar ao site
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="pagina-hero">
+  <div class="pagina-hero-inner">
+    <div class="pagina-tag">Propriedade Intelectual</div>
+    <h1>Declaração de<br>Direitos Autorais</h1>
+    <p>Proteção legal do conteúdo, código-fonte e composição visual deste site, nos termos da legislação brasileira vigente.</p>
+    <div class="pagina-data">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Última atualização: abril de 2025 &nbsp;·&nbsp; Herval d'Oeste/SC
+    </div>
+  </div>
+</div>
+
+<!-- CONTEÚDO -->
+<div class="container">
+
+  <!-- Cards de proteção legal -->
+  <div class="protecao-grid">
+    <div class="protecao-card">
+      <span class="icone">📜</span>
+      <h3>Direitos Autorais</h3>
+      <p>O conteúdo textual, estrutura editorial e composição intelectual deste site são protegidos desde sua criação, independentemente de registro formal.</p>
+      <span class="lei-badge">Lei 9.610/98 — Art. 7º, I</span>
+    </div>
+    <div class="protecao-card">
+      <span class="icone">💻</span>
+      <h3>Proteção de Software</h3>
+      <p>O código-fonte HTML, CSS e JavaScript desenvolvido para este site constitui programa de computador e goza de proteção legal específica.</p>
+      <span class="lei-badge">Lei 9.609/98 — Art. 2º</span>
+    </div>
+    <div class="protecao-card">
+      <span class="icone">🎨</span>
+      <h3>Composição Visual</h3>
+      <p>O design, a identidade visual, a paleta de cores, a tipografia aplicada e o arranjo estético das seções constituem obra protegida.</p>
+      <span class="lei-badge">Lei 9.610/98 — Art. 7º, X</span>
+    </div>
+  </div>
+
+  <!-- Seção 1 — Titularidade -->
+  <div class="secao-dir">
+    <h2 class="secao-dir-titulo">
+      <span>1</span> Titularidade
+    </h2>
+    <p>
+      O site <strong>www.eriveltonrossi.com.br</strong>, incluindo todo o seu conteúdo textual, estrutura de navegação, composição visual, código-fonte e elementos gráficos, é de titularidade exclusiva de <strong>Erivelton Rossi</strong>, CPF de identificação reservada, residente e domiciliado em <strong>Herval d'Oeste, Santa Catarina, Brasil</strong>.
+    </p>
+    <p>
+      A proteção decorre automaticamente da criação, nos termos do <strong>art. 18 da Lei 9.610/98</strong>, sendo desnecessário qualquer registro para que o autor desfrute dos direitos morais e patrimoniais sobre suas obras.
+    </p>
+  </div>
+
+  <!-- Seção 2 — Obras protegidas -->
+  <div class="secao-dir">
+    <h2 class="secao-dir-titulo">
+      <span>2</span> Obras protegidas
+    </h2>
+    <p>São objeto desta declaração, sem exclusão de outras obras não aqui listadas:</p>
+    <ul class="lista-dir">
+      <li>Textos, descrições, apresentações e conteúdos informativos redigidos para todas as páginas e seções do site.</li>
+      <li>Estrutura editorial e sequência de apresentação das informações (arquitetura de informação).</li>
+      <li>Código-fonte em HTML5, CSS3 e JavaScript desenvolvido ou adaptado para este site.</li>
+      <li>Identidade visual: paleta de cores, tipografia combinada, espaçamentos e padrões visuais definidos.</li>
+      <li>Composição e arranjo das seções, incluindo o Visual Law e o fluxograma de atendimento.</li>
+      <li>Seleção e organização das referências doutrinárias e portais jurídicos apresentados.</li>
+      <li>Citações filosóficas contextualizadas e sua aplicação editorial ao longo das seções.</li>
+    </ul>
+  </div>
+
+  <!-- Seção 3 — Vedações -->
+  <div class="secao-dir">
+    <h2 class="secao-dir-titulo">
+      <span>3</span> Condutas vedadas
+    </h2>
+    <p>Sem autorização prévia e expressa do titular, é expressamente proibido:</p>
+    <div class="vedacoes-grid">
+      <div class="vedacao-item">Reproduzir total ou parcialmente textos, estruturas ou código-fonte deste site.</div>
+      <div class="vedacao-item">Copiar, adaptar ou modificar o design, layout ou identidade visual.</div>
+      <div class="vedacao-item">Distribuir, publicar ou compartilhar o conteúdo em outros meios sem citação de autoria.</div>
+      <div class="vedacao-item">Utilizar o código-fonte como base para outros projetos sem autorização formal.</div>
+      <div class="vedacao-item">Praticar plágio ou apresentar como próprio qualquer conteúdo deste site.</div>
+      <div class="vedacao-item">Realizar scraping automatizado com fins de reprodução ou redistribuição do conteúdo.</div>
+    </div>
+    <p style="margin-top:16px;">
+      A violação de qualquer das disposições acima sujeita o infrator às sanções civis e penais previstas na <strong>Lei 9.610/98</strong> (arts. 102 a 110) e no <strong>Código Penal Brasileiro</strong> (art. 184), sem prejuízo de reparação por danos materiais e morais.
+    </p>
+  </div>
+
+  <!-- Seção 4 — Permissões -->
+  <div class="secao-dir">
+    <h2 class="secao-dir-titulo">
+      <span>4</span> Usos permitidos
+    </h2>
+    <p>São permitidos, sem necessidade de autorização prévia, desde que observada a <strong>citação da fonte e autoria</strong>:</p>
+    <div class="permissao-item">Citação de trechos breves para fins educacionais, acadêmicos ou jornalísticos, com indicação da fonte (art. 46, III, Lei 9.610/98).</div>
+    <div class="permissao-item">Compartilhamento de links para este site em redes sociais, fóruns ou materiais de estudo.</div>
+    <div class="permissao-item">Referência ao conteúdo em trabalhos acadêmicos, com citação completa conforme ABNT NBR 6023.</div>
+  </div>
+
+  <!-- Seção 5 — Fundamento legal -->
+  <div class="secao-dir">
+    <h2 class="secao-dir-titulo">
+      <span>5</span> Fundamento legal
+    </h2>
+    <ul class="lista-dir">
+      <li><strong>Lei 9.610/98</strong> — Lei de Direitos Autorais: proteção de obras literárias, artísticas e científicas, incluindo obras digitais e programas de computador quanto ao conteúdo.</li>
+      <li><strong>Lei 9.609/98</strong> — Lei de Software: proteção do código-fonte como programa de computador, com prazo de 50 anos a contar de 1º de janeiro do ano subsequente à publicação.</li>
+      <li><strong>Constituição Federal, art. 5º, XXVII</strong> — garantia do direito exclusivo de utilização, publicação ou reprodução de obras ao autor.</li>
+      <li><strong>Código Civil, arts. 11 a 21</strong> — proteção dos direitos da personalidade, incluindo nome, imagem e obras intelectuais.</li>
+      <li><strong>Código Penal, art. 184</strong> — crime de violação de direito autoral, com pena de detenção de 3 meses a 1 ano ou multa.</li>
+    </ul>
+  </div>
+
+  <!-- Declaração formal -->
+  <div class="declaracao-formal">
+    <h2>Declaração de Autoria</h2>
+    <p>
+      Eu, <strong>Erivelton Rossi</strong>, acadêmico de Direito na 10ª fase do curso de Direito da UNOESC — Universidade do Oeste de Santa Catarina, campus Joaçaba/SC, declaro para os devidos fins que sou o único autor e titular dos direitos morais e patrimoniais sobre o site <strong>www.eriveltonrossi.com.br</strong>, bem como de todo o conteúdo nele publicado, incluindo textos, estrutura editorial, código-fonte, identidade visual e composição das citações filosóficas e jurídicas apresentadas.
+    </p>
+    <p>
+      Esta declaração é firmada com base nos arts. 7º, 18, 22 e 24 da <strong>Lei 9.610/98</strong> e no art. 2º da <strong>Lei 9.609/98</strong>, e poderá ser utilizada como prova de autoria em eventual procedimento administrativo ou judicial.
+    </p>
+    <p>
+      A data de primeira publicação do site constitui marco temporal de proteção, sendo preservados registros eletrônicos de autoria e versionamento do projeto.
+    </p>
+    <div class="declaracao-assinatura">
+      <div class="declaracao-assinatura-nome">Erivelton Rossi</div>
+      <div class="declaracao-assinatura-dados">
+        Herval d'Oeste, Santa Catarina — Brasil<br>
+        www.eriveltonrossi.com.br<br>
+        eriveltonrss@gmail.com
+      </div>
+    </div>
+  </div>
+
+  <!-- Como reportar violação -->
+  <div class="reportar-box">
+    <div class="reportar-icone">⚠️</div>
+    <div>
+      <h3>Reportar violação de direitos autorais</h3>
+      <p>
+        Se você identificou uso indevido, reprodução não autorizada ou plágio de qualquer conteúdo deste site, entre em contato imediatamente pelo e-mail <a href="mailto:eriveltonrss@gmail.com">eriveltonrss@gmail.com</a> descrevendo o caso com evidências (URL, prints, data de identificação). Toda denúncia será analisada e as medidas cabíveis serão adotadas, incluindo notificação extrajudicial e, se necessário, medidas judiciais.
+      </p>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    © 2025 Erivelton Rossi — Todos os direitos reservados. &nbsp;·&nbsp;
+    <a href="index.html">Página inicial</a> &nbsp;·&nbsp;
+    <a href="politica.html">Política de Privacidade</a> &nbsp;·&nbsp;
+    <a href="mailto:eriveltonrss@gmail.com">eriveltonrss@gmail.com</a>
+  </p>
+  <p style="margin-top:8px; font-size:11px; color:rgba(255,255,255,0.2);">
+    Protegido pela Lei 9.610/98 (Direitos Autorais) e Lei 9.609/98 (Software) — República Federativa do Brasil.
+  </p>
+</footer>
+
+</body>
+</html>
