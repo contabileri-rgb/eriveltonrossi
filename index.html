@@ -51,30 +51,6 @@
       overflow-x: hidden;
     }
 
-    /* ── CURSOR PERSONALIZADO ─────────────────────── */
-    * { cursor: none !important; }
-    #cursor {
-      width: 10px; height: 10px;
-      background: var(--ouro);
-      border-radius: 50%;
-      position: fixed;
-      top: 0; left: 0;
-      pointer-events: none;
-      z-index: 9999;
-      transition: transform 0.15s ease, background 0.2s;
-      mix-blend-mode: multiply;
-    }
-    #cursor-ring {
-      width: 34px; height: 34px;
-      border: 1.5px solid rgba(196,154,42,0.5);
-      border-radius: 50%;
-      position: fixed;
-      top: 0; left: 0;
-      pointer-events: none;
-      z-index: 9998;
-      transition: transform 0.35s cubic-bezier(0.23,1,0.32,1), width 0.2s, height 0.2s, opacity 0.2s;
-    }
-    body:hover #cursor { opacity: 1; }
 
     /* ── BARRA DE PROGRESSO ───────────────────────── */
     #scroll-bar {
@@ -1723,8 +1699,6 @@
 
     /* ── RESPONSIVO ────────────────────────────────── */
     @media (max-width: 768px) {
-      * { cursor: auto !important; }
-      #cursor, #cursor-ring { display: none; }
 
       .hero { min-height: auto; padding: 60px 20px 52px; }
       .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 36px; }
@@ -1756,10 +1730,6 @@
   </style>
 </head>
 <body>
-
-<!-- Cursor personalizado -->
-<div id="cursor"></div>
-<div id="cursor-ring"></div>
 
 <!-- Barra de progresso de scroll -->
 <div id="scroll-bar"></div>
@@ -1984,7 +1954,7 @@
       <div class="area-card">
         <span class="area-icone">🧾</span>
         <h4>Contabilidade, IRPF e ITR</h4>
-        <p>Serviço contábil com CRC ativo: declaração de Imposto de Renda Pessoa Física e ITR, inclusive para produtores rurais. Prazo do ITR: até 30/09.</p>
+        <p>Serviço contábil com CRC ativo: declaração de Imposto de Renda Pessoa Física e ITR, inclusive para produtores rurais. Também regularizo declarações de ITR entregues em atraso.</p>
       </div>
       <div class="area-card">
         <span class="area-icone">📄</span>
@@ -2493,36 +2463,6 @@
 </div>
 
 <script>
-  /* ── CURSOR PERSONALIZADO ── */
-  const cursor = document.getElementById('cursor');
-  const cursorRing = document.getElementById('cursor-ring');
-  let mx = 0, my = 0, rx = 0, ry = 0;
-
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    cursor.style.transform = `translate(${mx - 5}px, ${my - 5}px)`;
-  });
-
-  function animRing() {
-    rx += (mx - rx) * 0.12;
-    ry += (my - ry) * 0.12;
-    cursorRing.style.transform = `translate(${rx - 17}px, ${ry - 17}px)`;
-    requestAnimationFrame(animRing);
-  }
-  animRing();
-
-  document.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      cursor.style.transform += ' scale(2)';
-      cursorRing.style.width = '50px';
-      cursorRing.style.height = '50px';
-    });
-    el.addEventListener('mouseleave', () => {
-      cursorRing.style.width = '34px';
-      cursorRing.style.height = '34px';
-    });
-  });
-
   /* ── BARRA DE PROGRESSO ── */
   const scrollBar = document.getElementById('scroll-bar');
   window.addEventListener('scroll', () => {
