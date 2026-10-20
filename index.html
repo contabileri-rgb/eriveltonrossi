@@ -1675,6 +1675,52 @@
     .hero-texto { animation: fadeUp 0.7s ease both; }
     .hero-foto-wrap { animation: fadeUp 0.7s ease 0.2s both; }
 
+    /* ── BOLETIM DA SEMANA ─────────────────────────── */
+    .boletim-secao {
+      background: var(--cinza-bg);
+      padding: 72px 28px;
+      border-bottom: 1px solid var(--cinza-borda);
+    }
+    .boletim-inner { max-width: 1100px; margin: 0 auto; }
+    .boletim-card {
+      display: block;
+      text-decoration: none;
+      background: var(--branco);
+      border: 1px solid var(--cinza-borda);
+      border-top: 3px solid var(--ouro);
+      border-radius: var(--raio-lg);
+      padding: 30px 30px 26px;
+      box-shadow: var(--sombra-sutil);
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+    .boletim-card:hover { box-shadow: var(--sombra-card); transform: translateY(-3px); }
+    .boletim-card-topo { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .boletim-data {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--ouro);
+    }
+    .boletim-nova {
+      font-size: 10.5px; font-weight: 600; color: #fff; background: var(--vermelho);
+      padding: 2px 10px; border-radius: 20px;
+    }
+    .boletim-card h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(19px, 2.4vw, 24px); font-weight: 700;
+      color: var(--vermelho); line-height: 1.3; margin-bottom: 14px;
+    }
+    .boletim-lista { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; margin-bottom: 18px; }
+    .boletim-lista li {
+      font-size: 14px; color: var(--texto-mid); font-weight: 300; padding-left: 16px; position: relative;
+    }
+    .boletim-lista li::before {
+      content: ''; position: absolute; left: 0; top: 10px;
+      width: 6px; height: 6px; border-radius: 50%; background: var(--ouro);
+    }
+    .boletim-ler { font-size: 14px; font-weight: 600; color: var(--vermelho-mid); }
+    .boletim-acoes { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 20px; }
+    .boletim-link { font-size: 14px; font-weight: 500; color: var(--vermelho); text-decoration: none; border-bottom: 1px solid rgba(122,12,31,0.25); }
+    .boletim-link:hover { border-bottom-color: var(--vermelho); }
+
     /* ── RESPONSIVO ────────────────────────────────── */
     @media (max-width: 768px) {
       * { cursor: auto !important; }
@@ -1698,6 +1744,10 @@
       .fluxo-item { max-width: 100%; }
 
       .form-row { grid-template-columns: 1fr; }
+
+      .boletim-secao { padding: 52px 20px; }
+      .boletim-card { padding: 24px 20px 20px; }
+      .boletim-lista { grid-template-columns: 1fr; }
 
       #cookie-banner { bottom: 0; left: 0; right: 0; border-radius: var(--raio-lg) var(--raio-lg) 0 0; }
 
@@ -1743,6 +1793,7 @@
       <a href="#sobre">Sobre</a>
       <a href="#atuacao">Atuação</a>
       <a href="#irpf">IR e ITR</a>
+      <a href="boletins/">Boletins</a>
       <a href="#como-funciona">Como funciona</a>
       <a href="#portais">Portais Jurídicos</a>
       <a href="#referencias">Referências</a>
@@ -1779,8 +1830,8 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Entrar em contato
         </a>
-        <a class="btn-secundario" href="https://wa.me/5549991242014?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20minha%20declara%C3%A7%C3%A3o%20de%20ITR%2FIRPF" target="_blank">
-          🌾 Declarar meu ITR (prazo até 30/09)
+        <a class="btn-secundario" href="#boletim">
+          📰 Boletim da semana
         </a>
         <a class="btn-secundario" href="#sobre">Conhecer o perfil</a>
       </div>
@@ -1810,6 +1861,37 @@
     <div class="hero-foto-wrap">
       <img src="banner-erivelton.png" alt="Foto de Erivelton Rossi, acadêmico de Direito" class="hero-foto">
       <span class="hero-badge">Bacharel em Direito</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── BOLETIM DA SEMANA ────────────────────────────── -->
+<section class="boletim-secao" id="boletim">
+  <div class="boletim-inner">
+    <p class="secao-titulo">Boletim semanal</p>
+    <h2 class="secao-h2">O que mudou nesta semana</h2>
+    <p class="secao-sub">Toda semana, as novidades em Previdência, Reforma Tributária e Meio Rural que podem afetar você, explicadas em linguagem simples e com datas e prazos.</p>
+
+    <!-- BOLETIM-DESTAQUE-INICIO (atualizado a cada edição) -->
+    <a class="boletim-card reveal" href="boletins/2026-10-20.html">
+      <div class="boletim-card-topo">
+        <span class="boletim-data">Edição de 20/10/2026</span>
+        <span class="boletim-nova">Nova</span>
+      </div>
+      <h3>Funrural antes de 2018: decisão do STF favorece o produtor rural</h3>
+      <ul class="boletim-lista">
+        <li>Salário-maternidade passa a ser concedido automaticamente após 30 dias</li>
+        <li>Promulgado o fim da escala 6x1</li>
+        <li>Simples 2027: regularização até 30/10</li>
+        <li>Renegociação de dívidas rurais até 12/11</li>
+      </ul>
+      <span class="boletim-ler">Ler o boletim completo →</span>
+    </a>
+    <!-- BOLETIM-DESTAQUE-FIM -->
+
+    <div class="boletim-acoes">
+      <a class="boletim-link" href="boletins/">Ver todas as edições</a>
+      <a class="boletim-link" href="https://wa.me/5549991242014?text=Ol%C3%A1%2C%20quero%20receber%20o%20boletim%20semanal%20pelo%20WhatsApp" target="_blank" rel="noopener">Receber pelo WhatsApp</a>
     </div>
   </div>
 </section>
@@ -1946,7 +2028,7 @@
     <p class="secao-sub">Diferente do conteúdo jurídico informativo deste site, a declaração de IRPF e do ITR é um <strong>serviço contábil efetivamente prestado</strong>, na condição de contador com registro ativo no CRC — inclusive para produtores rurais.</p>
 
     <div class="aviso-academico" style="background: rgba(122,12,31,0.06); border-color: rgba(122,12,31,0.15); border-left-color: var(--vermelho); color: var(--texto-mid); max-width: 100%; margin-bottom:36px;">
-      ⏳ <strong>Prazo do ITR 2026:</strong> a entrega da DITR vai até <strong>30 de setembro</strong>, mesma data de vencimento da quota única ou da 1ª parcela. Atraso gera multa de 1% ao mês sobre o imposto devido (mínimo de R$ 50). Quem tem imóvel rural e ainda não organizou a documentação, o momento de procurar ajuda é agora.
+      ⏳ <strong>ITR 2026:</strong> o prazo normal de entrega da DITR terminou em <strong>30 de setembro</strong>. Quem não entregou ainda pode regularizar, entregando a declaração em atraso, com multa de 1% ao mês sobre o imposto devido (mínimo de R$ 50). Quanto antes, menor a multa.
     </div>
 
     <div class="sobre-grid" style="margin-bottom:36px;">
@@ -2349,6 +2431,7 @@
         <h5>Navegação</h5>
         <a href="#sobre">Sobre</a>
         <a href="#atuacao">Áreas de atuação</a>
+        <a href="boletins/">Boletins semanais</a>
         <a href="#como-funciona">Como funciona</a>
         <a href="#portais">Portais jurídicos</a>
         <a href="#referencias">Referências</a>
