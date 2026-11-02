@@ -2,11 +2,25 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Erivelton Rossi | Bacharel em Direito — Herval d'Oeste/SC</title>
+  <title>Erivelton Rossi | IRPF, ITR e informação previdenciária em Herval d'Oeste/SC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Perfil acadêmico e informativo de Erivelton Rossi, bacharel em Direito e pós-graduando em Direito Previdenciário. Conteúdo orientativo sobre organização documental, temas jurídicos e administrativos. Herval d'Oeste/SC.">
+  <meta name="description" content="Erivelton Rossi, contador (CRC ativo) e bacharel em Direito em Herval d'Oeste/SC: declaração de IRPF e ITR para produtores rurais, guias e ferramentas gratuitas sobre Previdência e boletim semanal.">
   <meta name="author" content="Erivelton Rossi">
   <link rel="canonical" href="https://www.eriveltonrossi.com.br/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Erivelton Rossi">
+  <meta property="og:title" content="Erivelton Rossi | IRPF, ITR e informação previdenciária">
+  <meta property="og:description" content="Declaração de IRPF e ITR para produtores rurais, guias e ferramentas gratuitas sobre Previdência e boletim semanal. Herval d'Oeste/SC.">
+  <meta property="og:url" content="https://www.eriveltonrossi.com.br/">
+  <meta property="og:image" content="https://www.eriveltonrossi.com.br/assets/og-erivelton.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#4d0712">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Erivelton Rossi", "url": "https://www.eriveltonrossi.com.br/", "image": "https://www.eriveltonrossi.com.br/assets/erivelton-600.jpg", "jobTitle": "Contador e bacharel em Direito", "description": "Contador com registro ativo no CRC, bacharel em Direito e pós-graduando em Direito Previdenciário.", "alumniOf": {"@type": "CollegeOrUniversity", "name": "Unoesc - Universidade do Oeste de Santa Catarina"}, "address": {"@type": "PostalAddress", "addressLocality": "Herval d'Oeste", "addressRegion": "SC", "addressCountry": "BR"}, "telephone": "+55-49-99124-2014", "sameAs": ["https://instagram.com/rossi_e2026"], "knowsAbout": ["Imposto de Renda Pessoa Física", "ITR", "Atividade rural", "Direito Previdenciário"]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "AccountingService", "name": "Erivelton Rossi - Declaração de IRPF e ITR", "url": "https://www.eriveltonrossi.com.br/#irpf", "image": "https://www.eriveltonrossi.com.br/assets/og-erivelton.jpg", "telephone": "+55-49-99124-2014", "address": {"@type": "PostalAddress", "addressLocality": "Herval d'Oeste", "addressRegion": "SC", "addressCountry": "BR"}, "areaServed": ["Herval d'Oeste", "Joaçaba", "Luzerna", "Campos Novos", "Meio-Oeste catarinense"], "description": "Declaração de Imposto de Renda Pessoa Física e ITR, inclusive para produtores rurais. Atendimento virtual com agendamento."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Erivelton Rossi", "url": "https://www.eriveltonrossi.com.br/", "inLanguage": "pt-BR"}</script>
 
   <!-- Fontes refinadas -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1727,6 +1741,20 @@
 
       .topo { padding: 14px 20px 10px; }
     }
+
+    /* ── FERRAMENTAS E GUIAS ─────────────────────── */
+    .recursos-secao { padding: 72px 28px; background: var(--off-white); border-bottom: 1px solid var(--cinza-borda); }
+    .recursos-inner { max-width: 1100px; margin: 0 auto; }
+    .recursos-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 32px; }
+    .recurso { display: flex; flex-direction: column; gap: 6px; text-decoration: none; background: var(--branco); border: 1px solid var(--cinza-borda); border-radius: var(--raio-lg); padding: 24px 22px; box-shadow: var(--sombra-sutil); transition: box-shadow .2s, transform .2s; position: relative; overflow: hidden; }
+    .recurso::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--vermelho), var(--ouro)); }
+    .recurso:hover { box-shadow: var(--sombra-card); transform: translateY(-2px); }
+    .recurso .tipo { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--ouro); font-weight: 600; }
+    .recurso h3 { font-family: 'Playfair Display', serif; font-size: 19px; color: var(--vermelho); line-height: 1.3; }
+    .recurso p { font-size: 14px; color: var(--texto-mid); font-weight: 300; }
+    .recursos-links { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 22px; font-size: 14px; }
+    .recursos-links a { color: var(--vermelho-mid); font-weight: 500; }
+    @media (max-width: 600px) { .recursos-secao { padding: 52px 20px; } }
   </style>
 </head>
 <body>
@@ -1764,6 +1792,8 @@
       <a href="#atuacao">Atuação</a>
       <a href="#irpf">IR e ITR</a>
       <a href="boletins/">Boletins</a>
+      <a href="guias/">Guias</a>
+      <a href="ferramentas/">Ferramentas</a>
       <a href="#como-funciona">Como funciona</a>
       <a href="#portais">Portais Jurídicos</a>
       <a href="#referencias">Referências</a>
@@ -1829,7 +1859,7 @@
     </div>
 
     <div class="hero-foto-wrap">
-      <img src="banner-erivelton.png" alt="Foto de Erivelton Rossi, acadêmico de Direito" class="hero-foto">
+      <picture><source srcset="assets/erivelton-600.webp" type="image/webp"><img src="assets/erivelton-600.jpg" width="600" height="600" fetchpriority="high" alt="Foto de Erivelton Rossi, bacharel em Direito e contador" class="hero-foto"></picture>
       <span class="hero-badge">Bacharel em Direito</span>
     </div>
   </div>
@@ -1863,6 +1893,24 @@
       <a class="boletim-link" href="boletins/">Ver todas as edições</a>
       <a class="boletim-link" href="https://wa.me/5549991242014?text=Ol%C3%A1%2C%20quero%20receber%20o%20boletim%20semanal%20pelo%20WhatsApp" target="_blank" rel="noopener">Receber pelo WhatsApp</a>
     </div>
+  </div>
+</section>
+
+<!-- ── FERRAMENTAS E GUIAS ──────────────────────────── -->
+<section class="recursos-secao" id="ferramentas">
+  <div class="recursos-inner">
+    <p class="secao-titulo">Ferramentas e guias gratuitos</p>
+    <h2 class="secao-h2">Resolva a primeira dúvida sozinho</h2>
+    <p class="secao-sub">Calculadoras e guias em linguagem simples para quem precisa entender a própria situação antes do atendimento. Tudo roda no navegador, sem enviar dados.</p>
+    <div class="recursos-grid">
+      <a class="recurso" href="ferramentas/multa-ir-itr.html"><span class="tipo">Calculadora</span><h3>Multa por atraso do IR e do ITR</h3><p>Perdeu o prazo? Veja quanto fica a multa, mês a mês.</p></a>
+      <a class="recurso" href="ferramentas/tempo-de-contribuicao.html"><span class="tipo">Calculadora</span><h3>Somador de tempo de contribuição</h3><p>Some seus períodos sem contar duas vezes o tempo simultâneo.</p></a>
+      <a class="recurso" href="ferramentas/checklist-documentos.html"><span class="tipo">Checklist</span><h3>Documentos para INSS, IR e ITR</h3><p>Marque o que já tem e envie a lista do que falta.</p></a>
+      <a class="recurso" href="guias/aposentadoria-rural-documentos.html"><span class="tipo">Guia</span><h3>Aposentadoria rural: documentos</h3><p>Quais papéis comprovam o trabalho no campo.</p></a>
+      <a class="recurso" href="guias/itr-atrasado.html"><span class="tipo">Guia</span><h3>ITR atrasado: como regularizar</h3><p>Multa, consequências e passo a passo.</p></a>
+      <a class="recurso" href="guias/imposto-de-renda-produtor-rural.html"><span class="tipo">Guia</span><h3>IR do produtor rural</h3><p>Resultado real ou 20% da receita bruta?</p></a>
+    </div>
+    <div class="recursos-links"><a href="ferramentas/">Todas as ferramentas →</a><a href="guias/">Todos os guias →</a></div>
   </div>
 </section>
 
@@ -2402,6 +2450,8 @@
         <a href="#sobre">Sobre</a>
         <a href="#atuacao">Áreas de atuação</a>
         <a href="boletins/">Boletins semanais</a>
+        <a href="guias/">Guias práticos</a>
+        <a href="ferramentas/">Ferramentas gratuitas</a>
         <a href="#como-funciona">Como funciona</a>
         <a href="#portais">Portais jurídicos</a>
         <a href="#referencias">Referências</a>

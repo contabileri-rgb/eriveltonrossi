@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora de multa por atraso do IR e do ITR 2026 | Erivelton Rossi</title>
+  <meta name="description" content="Calcule a multa por atraso na entrega da declaração do Imposto de Renda (IRPF) ou do ITR: 1% ao mês, mínimo de R$ 165,74 no IR e R$ 50 no ITR.">
+  <meta name="author" content="Erivelton Rossi">
+  <link rel="canonical" href="https://www.eriveltonrossi.com.br/ferramentas/multa-ir-itr.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Erivelton Rossi">
+  <meta property="og:title" content="Calculadora de multa por atraso do IR e do ITR 2026 | Erivelton Rossi">
+  <meta property="og:description" content="Calcule a multa por atraso na entrega da declaração do Imposto de Renda (IRPF) ou do ITR: 1% ao mês, mínimo de R$ 165,74 no IR e R$ 50 no ITR.">
+  <meta property="og:url" content="https://www.eriveltonrossi.com.br/ferramentas/multa-ir-itr.html">
+  <meta property="og:image" content="https://www.eriveltonrossi.com.br/assets/og-erivelton.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#4d0712">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../boletins/boletim.css">
+  <link rel="stylesheet" href="../assets/ferramentas.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Calculadora de multa por atraso do IR e do ITR", "url": "https://www.eriveltonrossi.com.br/ferramentas/multa-ir-itr.html", "description": "Estima a multa por atraso na entrega da DIRPF e da DITR.", "applicationCategory": "UtilityApplication", "operatingSystem": "Navegador", "inLanguage": "pt-BR", "isAccessibleForFree": true, "author": {"@type": "Person", "name": "Erivelton Rossi", "url": "https://www.eriveltonrossi.com.br/"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://www.eriveltonrossi.com.br/"}, {"@type": "ListItem", "position": 2, "name": "Ferramentas", "item": "https://www.eriveltonrossi.com.br/ferramentas/"}, {"@type": "ListItem", "position": 3, "name": "Multa IR e ITR", "item": "https://www.eriveltonrossi.com.br/ferramentas/multa-ir-itr.html"}]}</script>
+</head>
+<body>
+
+<header>
+  <div class="topo">
+    <a class="logo-nome" href="../">Erivelton Rossi</a>
+    <div class="logo-sub">Bacharel em Direito &nbsp;·&nbsp; Contador (CRC ativo) &nbsp;·&nbsp; Herval d'Oeste / SC</div>
+    <nav>
+      <a href="../">Início</a>
+      <a href="../guias/">Guias</a>
+      <a href="../ferramentas/" class="ativo">Ferramentas</a>
+      <a href="../boletins/">Boletins</a>
+      <a href="../#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<section class="bol-hero">
+  <div class="bol-hero-inner">
+    <p class="secao-titulo">Ferramenta gratuita · IRPF e ITR</p>
+    <h1>Calculadora de multa por <em>atraso</em> do IR e do ITR</h1>
+    <p class="lead">Perdeu o prazo? Veja quanto fica a multa da declaração entregue em atraso e quanto você economiza regularizando logo.</p>
+    <p class="atualizado">Atualizado em 02/11/2026</p>
+  </div>
+</section>
+
+<main class="bol-conteudo">
+  <div class="ferramenta">
+    <div class="campo" style="margin-bottom:18px;">
+      <span class="rot">Qual declaração?</span>
+      <div class="seg" role="group" aria-label="Tipo de declaração">
+        <button type="button" data-tipo="irpf" aria-pressed="true">IRPF (Imposto de Renda)</button>
+        <button type="button" data-tipo="itr" aria-pressed="false">ITR (imóvel rural)</button>
+      </div>
+    </div>
+    <div class="campos">
+      <div class="campo">
+        <label for="prazo">Prazo final da declaração</label>
+        <input type="date" id="prazo">
+        <small id="prazo-dica"></small>
+      </div>
+      <div class="campo">
+        <label for="entrega">Data da entrega (ou prevista)</label>
+        <input type="date" id="entrega">
+      </div>
+      <div class="campo">
+        <label for="imposto">Imposto devido na declaração (R$)</label>
+        <input type="text" id="imposto" inputmode="decimal" placeholder="0,00">
+        <small>No IRPF, é o "imposto devido" da declaração, não o saldo a pagar. Se não houver imposto, deixe 0.</small>
+      </div>
+    </div>
+    <div class="acoes">
+      <button class="btn" type="button" id="calcular">Calcular multa</button>
+    </div>
+    <div class="resultado" id="res" hidden aria-live="polite"></div>
+  </div>
+
+  <div class="guia">
+    <h2>Como a multa é calculada</h2>
+    <p><strong>IRPF:</strong> 1% ao mês-calendário ou fração de atraso sobre o imposto devido, com mínimo de R$ 165,74 e máximo de 20% do imposto devido (art. 88 da Lei 8.981/1995). A multa mínima vale mesmo para quem não tem imposto a pagar.</p>
+    <p><strong>ITR:</strong> 1% ao mês-calendário ou fração de atraso sobre o imposto devido, com mínimo de R$ 50,00 (art. 7º da Lei 9.393/1996). A lei do ITR não fixa teto percentual para essa multa.</p>
+    <p>A contagem começa no dia seguinte ao fim do prazo: entregar a declaração em qualquer dia do mês seguinte equivale a 1 mês de atraso. Se a multa for paga em até 30 dias da notificação, a Receita concede redução de 50% (IRPF). Imposto em atraso também tem juros (Selic) e multa de mora, que não estão nesta conta.</p>
+    <p>Veja também o guia <a href="../guias/itr-atrasado.html">ITR atrasado: como regularizar</a>.</p>
+  </div>
+
+<script>
+(function () {
+  var tipo = 'irpf';
+  var PADRAO = { irpf: '2026-05-29', itr: '2026-09-30' };
+  var DICA = { irpf: 'IRPF 2026: o prazo terminou em 29/05/2026.', itr: 'ITR 2026: o prazo terminou em 30/09/2026.' };
+  var $ = function (id) { return document.getElementById(id); };
+  function hojeISO() { var d = new Date(); d.setMinutes(d.getMinutes() - d.getTimezoneOffset()); return d.toISOString().slice(0, 10); }
+  function brl(v) { return v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); }
+  function num(s) { s = String(s || '').replace(/[^0-9,.-]/g, ''); if (s.indexOf(',') > -1) s = s.replace(/\./g, '').replace(',', '.'); var n = parseFloat(s); return isNaN(n) ? 0 : n; }
+  function dataBR(iso) { var p = iso.split('-'); return p[2] + '/' + p[1] + '/' + p[0]; }
+  function aplicaTipo(t) {
+    tipo = t;
+    document.querySelectorAll('[data-tipo]').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.tipo === t ? 'true' : 'false'); });
+    $('prazo').value = PADRAO[t]; $('prazo-dica').textContent = DICA[t]; $('res').hidden = true;
+  }
+  document.querySelectorAll('[data-tipo]').forEach(function (b) { b.addEventListener('click', function () { aplicaTipo(b.dataset.tipo); }); });
+  $('entrega').value = hojeISO();
+  aplicaTipo('irpf');
+
+  $('calcular').addEventListener('click', function () {
+    var p = $('prazo').value, e = $('entrega').value, res = $('res');
+    res.hidden = false;
+    if (!p || !e) { res.innerHTML = '<p class="det">Informe as duas datas.</p>'; return; }
+    if (e <= p) { res.innerHTML = '<div class="grande">Sem multa</div><p class="det">Entregue até ' + dataBR(p) + ', a declaração está dentro do prazo.</p>'; return; }
+    var ps = p.split('-').map(Number), es = e.split('-').map(Number);
+    var meses = Math.max(1, (es[0] - ps[0]) * 12 + (es[1] - ps[1]));
+    var imp = num($('imposto').value);
+    var pct = meses / 100, minimo = tipo === 'irpf' ? 165.74 : 50;
+    var bruto = imp * pct, multa, obs;
+    if (tipo === 'irpf') {
+      var teto = imp * 0.20;
+      multa = Math.max(minimo, Math.min(bruto, teto));
+      obs = bruto >= teto && imp > 0 ? 'Atingiu o teto de 20% do imposto devido.' : (multa === minimo ? 'Aplicada a multa mínima de R$ 165,74.' : '');
+    } else {
+      multa = Math.max(minimo, bruto);
+      obs = multa === minimo ? 'Aplicada a multa mínima de R$ 50,00.' : '';
+    }
+    var rows = '<tr><td>Meses de atraso (mês-calendário ou fração)</td><td>' + meses + '</td></tr>' +
+      '<tr><td>Percentual sobre o imposto devido</td><td>' + (tipo === 'irpf' ? Math.min(meses, 20) : meses) + '%</td></tr>' +
+      '<tr><td>Imposto devido informado</td><td>' + brl(imp) + '</td></tr>' +
+      (tipo === 'irpf' ? '<tr><td>Se pagar em até 30 dias da notificação (redução de 50%)</td><td>' + brl(multa / 2) + '</td></tr>' : '');
+    res.innerHTML = '<div class="det">Multa estimada por atraso na entrega</div><div class="grande">' + brl(multa) + '</div>' +
+      (obs ? '<p class="det">' + obs + '</p>' : '') + '<table>' + rows + '</table>' +
+      '<p class="det">Estimativa informativa. O valor oficial consta na notificação de lançamento emitida pela Receita Federal.</p>' +
+      '<div class="acoes"><a class="btn" target="_blank" rel="noopener" href="https://wa.me/5549991242014?text=' +
+      encodeURIComponent('Olá, calculei no site uma multa de ' + brl(multa) + ' por atraso no ' + (tipo === 'irpf' ? 'IRPF' : 'ITR') + ' e quero regularizar.') +
+      '">Regularizar minha declaração</a></div>';
+  });
+})();
+</script>
+
+  <section class="cta">
+    <h2>Quer ajuda com o seu caso?</h2>
+    <p>Atendimento virtual, com agendamento, para produtores rurais, trabalhadores e pequenos negócios de Herval d'Oeste, Joaçaba, Campos Novos e região.</p>
+    <div class="hero-acoes">
+      <a class="btn-primario" href="https://wa.me/5549991242014?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida" target="_blank" rel="noopener">Conversar pelo WhatsApp</a>
+      <a class="btn-secundario" href="../boletins/">Ler o boletim semanal</a>
+    </div>
+  </section>
+
+  <p class="aviso">Conteúdo e ferramentas de caráter exclusivamente informativo e educativo. Os resultados são estimativas e não substituem a análise individual do caso nem os cálculos oficiais do INSS ou da Receita Federal. O autor é bacharel em Direito e contador com registro ativo no CRC, ainda não inscrito na OAB. Demandas que exijam atuação privativa de advogado são encaminhadas a profissional habilitado.</p>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Erivelton Rossi. Bacharel em Direito, não inscrito na OAB, e contador com registro ativo no CRC. Conteúdo protegido pela Lei 9.610/98.</p>
+    <div class="footer-links">
+      <a href="../">Início</a>
+      <a href="../guias/">Guias</a>
+      <a href="../ferramentas/">Ferramentas</a>
+      <a href="../boletins/">Boletins</a>
+      <a href="../politica.html">Privacidade</a>
+      <a href="../direitos.html">Direitos Autorais</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

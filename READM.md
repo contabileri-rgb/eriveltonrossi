@@ -1,5 +1,5 @@
 # Site – Erivelton Rossi
-Site institucional de consultoria contábil, documental e rural.
+Site institucional e informativo: IRPF/ITR, guias e ferramentas gratuitas, boletim semanal.
 
 Domínio: www.eriveltonrossi.com.br  
 Profissional responsável: Erivelton Rossi – Contador (CRC 037.881/O-1)

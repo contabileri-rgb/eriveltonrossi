@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checklist de documentos: aposentadoria rural, auxílio, BPC, IR e ITR | Erivelton Rossi</title>
+  <meta name="description" content="Lista interativa de documentos para aposentadoria rural, auxílio por incapacidade, BPC/LOAS, declaração de IRPF e ITR. Marque o que já tem e imprima.">
+  <meta name="author" content="Erivelton Rossi">
+  <link rel="canonical" href="https://www.eriveltonrossi.com.br/ferramentas/checklist-documentos.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Erivelton Rossi">
+  <meta property="og:title" content="Checklist de documentos: aposentadoria rural, auxílio, BPC, IR e ITR | Erivelton Rossi">
+  <meta property="og:description" content="Lista interativa de documentos para aposentadoria rural, auxílio por incapacidade, BPC/LOAS, declaração de IRPF e ITR. Marque o que já tem e imprima.">
+  <meta property="og:url" content="https://www.eriveltonrossi.com.br/ferramentas/checklist-documentos.html">
+  <meta property="og:image" content="https://www.eriveltonrossi.com.br/assets/og-erivelton.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#4d0712">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../boletins/boletim.css">
+  <link rel="stylesheet" href="../assets/ferramentas.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Checklist de documentos para INSS e Receita Federal", "url": "https://www.eriveltonrossi.com.br/ferramentas/checklist-documentos.html", "description": "Lista interativa de documentos para pedidos ao INSS e declarações de IRPF e ITR.", "applicationCategory": "UtilityApplication", "operatingSystem": "Navegador", "inLanguage": "pt-BR", "isAccessibleForFree": true, "author": {"@type": "Person", "name": "Erivelton Rossi", "url": "https://www.eriveltonrossi.com.br/"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://www.eriveltonrossi.com.br/"}, {"@type": "ListItem", "position": 2, "name": "Ferramentas", "item": "https://www.eriveltonrossi.com.br/ferramentas/"}, {"@type": "ListItem", "position": 3, "name": "Checklist de documentos", "item": "https://www.eriveltonrossi.com.br/ferramentas/checklist-documentos.html"}]}</script>
+</head>
+<body>
+
+<header>
+  <div class="topo">
+    <a class="logo-nome" href="../">Erivelton Rossi</a>
+    <div class="logo-sub">Bacharel em Direito &nbsp;·&nbsp; Contador (CRC ativo) &nbsp;·&nbsp; Herval d'Oeste / SC</div>
+    <nav>
+      <a href="../">Início</a>
+      <a href="../guias/">Guias</a>
+      <a href="../ferramentas/" class="ativo">Ferramentas</a>
+      <a href="../boletins/">Boletins</a>
+      <a href="../#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<section class="bol-hero">
+  <div class="bol-hero-inner">
+    <p class="secao-titulo">Ferramenta gratuita · Documentos</p>
+    <h1>Checklist de <em>documentos</em></h1>
+    <p class="lead">Escolha o tipo de pedido, marque o que você já separou e veja o que ainda falta. Dá para imprimir ou enviar a lista pelo WhatsApp.</p>
+    <p class="atualizado">Atualizado em 02/11/2026</p>
+  </div>
+</section>
+
+<main class="bol-conteudo">
+  <div class="ferramenta">
+    <div class="abas" role="tablist" aria-label="Tipo de pedido" id="abas"></div>
+    <div class="det" id="contagem" style="font-size:14px;color:var(--texto-mid);"></div>
+    <div class="progresso" aria-hidden="true"><span id="barra"></span></div>
+    <div id="itens"></div>
+    <div class="acoes">
+      <button class="btn" type="button" id="enviar">Enviar o que falta pelo WhatsApp</button>
+      <button class="btn claro" type="button" onclick="window.print()">Imprimir lista</button>
+      <button class="btn claro" type="button" id="limpar">Desmarcar tudo</button>
+    </div>
+  </div>
+  <div class="guia">
+    <p>As marcações ficam salvas apenas neste aparelho. A lista é uma referência geral: o INSS e a Receita Federal podem pedir outros documentos conforme o caso. Saiba mais no guia <a href="../guias/aposentadoria-rural-documentos.html">Aposentadoria rural: documentos que comprovam a atividade</a>.</p>
+  </div>
+
+<script>
+(function () {
+  var L = {"rural": ["Aposentadoria rural", [["Identificação", [["Documento de identidade (RG, CIN ou CNH) e CPF", ""], ["Comprovante de residência atualizado", ""], ["Certidão de casamento ou de união estável", "Quando houver; a profissão de agricultor nos registros ajuda"]]], ["Prova da atividade rural", [["Autodeclaração do segurado especial (rural)", "Formulário do INSS, assinado pelo segurado"], ["CAF (antiga DAP) ou inscrição no cadastro da agricultura familiar", ""], ["Notas fiscais de produtor rural ao longo dos anos", "Quanto mais distribuídas no tempo, melhor"], ["Documento da terra: matrícula, ITR, CCIR ou contrato de arrendamento/parceria/comodato", ""], ["Certidões de nascimento dos filhos e documentos escolares com profissão rural", ""], ["Ficha ou declaração de sindicato rural e documentos de cooperativa", ""], ["Comprovantes de crédito rural (Pronaf), seguro ou vacinação de rebanho", ""]]], ["Outros vínculos", [["Carteira de trabalho e extrato do CNIS", "Para conferir se há período urbano"]]]]], "incapacidade": ["Auxílio por incapacidade", [["Identificação", [["Documento de identidade e CPF", ""], ["Carteira de trabalho e extrato do CNIS", ""], ["Comprovantes de pagamento do INSS (DAS do MEI ou carnê GPS)", "Se for MEI, autônomo ou facultativo"]]], ["Documentos médicos", [["Atestado médico recente com CID, data de início e tempo estimado de afastamento", "Legível, com assinatura e CRM"], ["Laudos e exames que comprovem a doença ou lesão", ""], ["Receitas e comprovantes de tratamento (fisioterapia, cirurgia, internação)", ""], ["Prontuários e histórico de atendimentos", "Ajudam a mostrar desde quando existe a incapacidade"]]], ["Trabalho", [["Descrição da atividade que exerce e por que não consegue fazê-la", ""], ["Comunicação de Acidente de Trabalho (CAT)", "Se a incapacidade decorre de acidente ou doença do trabalho"]]]]], "bpc": ["BPC/LOAS", [["Cadastro", [["Inscrição atualizada no CadÚnico", "Requisito obrigatório; atualize no CRAS do município"], ["CPF de todas as pessoas da família que moram na casa", ""], ["Documento de identidade do requerente e do representante, se houver", ""]]], ["Renda da família", [["Comprovantes de renda de todos os moradores", "Holerite, extrato de benefício ou declaração de informal"], ["Comprovantes de gastos com saúde não fornecidos pelo SUS", "Podem ser considerados na análise"]]], ["Pessoa com deficiência", [["Laudos médicos com CID e descrição das limitações", "A deficiência deve ser de longo prazo"], ["Relatórios de terapias, escola especial ou acompanhamento", ""]]]]], "irpf": ["IRPF", [["Dados pessoais", [["CPF do titular, dependentes e alimentandos", ""], ["Recibo da última declaração entregue", ""], ["Dados bancários para restituição", ""]]], ["Rendimentos", [["Informes de rendimentos de empregadores, INSS e bancos", ""], ["Comprovantes de aluguéis recebidos e outras rendas", ""]]], ["Atividade rural", [["Notas fiscais de venda da produção (NF-e e notas de produtor)", ""], ["Notas e recibos de despesas de custeio e investimento", "Insumos, ração, combustível, manutenção, mão de obra"], ["Financiamentos rurais e respectivos pagamentos", ""], ["Relação de rebanho e estoques no início e no fim do ano", ""]]], ["Despesas, bens e dívidas", [["Recibos de despesas médicas e de educação", ""], ["Documentos de compra e venda de bens (imóveis, veículos, máquinas)", ""], ["Saldos de financiamentos e empréstimos em 31/12", ""]]]]], "itr": ["ITR", [["Imóvel", [["Matrícula atualizada ou escritura do imóvel", ""], ["CCIR (Certificado de Cadastro de Imóvel Rural)", ""], ["Número do imóvel na Receita (NIRF/CIB)", ""], ["Recibo de inscrição no CAR", ""]]], ["Áreas e uso", [["Área de reserva legal, preservação permanente e matas", "Áreas ambientais reduzem a área tributável"], ["Área plantada, de pastagem e quantidade de rebanho", "Usadas para calcular o grau de utilização"], ["Declaração do ano anterior e comprovantes de pagamento", ""]]]]]};
+  var $ = function (id) { return document.getElementById(id); };
+  var atual = 'rural', marc = {};
+  try { marc = JSON.parse(localStorage.getItem('er-checklist') || '{}'); } catch (e) { marc = {}; }
+  function salvar() { try { localStorage.setItem('er-checklist', JSON.stringify(marc)); } catch (e) {} }
+  try { var h = location.hash.slice(1); if (L[h]) atual = h; } catch (e) {}
+  Object.keys(L).forEach(function (k) {
+    var b = document.createElement('button'); b.type = 'button'; b.setAttribute('role', 'tab'); b.dataset.k = k; b.textContent = L[k][0];
+    b.addEventListener('click', function () { atual = k; try { history.replaceState(null, '', '#' + k); } catch (e) {} render(); });
+    $('abas').appendChild(b);
+  });
+  function render() {
+    document.querySelectorAll('#abas button').forEach(function (b) { b.setAttribute('aria-selected', b.dataset.k === atual ? 'true' : 'false'); });
+    var html = '', i = 0;
+    L[atual][1].forEach(function (g) {
+      html += '<div class="grupo-doc"><h4>' + g[0] + '</h4>';
+      g[1].forEach(function (d) {
+        var id = atual + '-' + (i++);
+        html += '<label class="doc"><input type="checkbox" data-id="' + id + '"' + (marc[id] ? ' checked' : '') + '><span>' + d[0] + (d[1] ? '<small>' + d[1] + '</small>' : '') + '</span></label>';
+      });
+      html += '</div>';
+    });
+    $('itens').innerHTML = html;
+    $('itens').querySelectorAll('input').forEach(function (c) { c.addEventListener('change', function () { marc[c.dataset.id] = c.checked; salvar(); conta(); }); });
+    conta();
+  }
+  function conta() {
+    var cs = $('itens').querySelectorAll('input'), ok = 0;
+    cs.forEach(function (c) { if (c.checked) ok++; });
+    $('contagem').textContent = ok + ' de ' + cs.length + ' documentos separados';
+    $('barra').style.width = (cs.length ? ok / cs.length * 100 : 0) + '%';
+  }
+  $('limpar').addEventListener('click', function () { $('itens').querySelectorAll('input').forEach(function (c) { c.checked = false; marc[c.dataset.id] = false; }); salvar(); conta(); });
+  $('enviar').addEventListener('click', function () {
+    var falta = [];
+    $('itens').querySelectorAll('input').forEach(function (c) { if (!c.checked) falta.push('- ' + c.parentNode.querySelector('span').firstChild.textContent); });
+    var txt = 'Olá, estou separando documentos para ' + L[atual][0] + '. ' + (falta.length ? 'Ainda faltam:\n' + falta.join('\n') : 'Já separei todos os itens da lista.');
+    window.open('https://wa.me/5549991242014?text=' + encodeURIComponent(txt), '_blank', 'noopener');
+  });
+  render();
+})();
+</script>
+
+  <section class="cta">
+    <h2>Quer ajuda com o seu caso?</h2>
+    <p>Atendimento virtual, com agendamento, para produtores rurais, trabalhadores e pequenos negócios de Herval d'Oeste, Joaçaba, Campos Novos e região.</p>
+    <div class="hero-acoes">
+      <a class="btn-primario" href="https://wa.me/5549991242014?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida" target="_blank" rel="noopener">Conversar pelo WhatsApp</a>
+      <a class="btn-secundario" href="../boletins/">Ler o boletim semanal</a>
+    </div>
+  </section>
+
+  <p class="aviso">Conteúdo e ferramentas de caráter exclusivamente informativo e educativo. Os resultados são estimativas e não substituem a análise individual do caso nem os cálculos oficiais do INSS ou da Receita Federal. O autor é bacharel em Direito e contador com registro ativo no CRC, ainda não inscrito na OAB. Demandas que exijam atuação privativa de advogado são encaminhadas a profissional habilitado.</p>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Erivelton Rossi. Bacharel em Direito, não inscrito na OAB, e contador com registro ativo no CRC. Conteúdo protegido pela Lei 9.610/98.</p>
+    <div class="footer-links">
+      <a href="../">Início</a>
+      <a href="../guias/">Guias</a>
+      <a href="../ferramentas/">Ferramentas</a>
+      <a href="../boletins/">Boletins</a>
+      <a href="../politica.html">Privacidade</a>
+      <a href="../direitos.html">Direitos Autorais</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
