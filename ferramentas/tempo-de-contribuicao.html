@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Somador de tempo de contribuição gratuito (INSS) | Erivelton Rossi</title>
+  <meta name="description" content="Some seus períodos de trabalho e veja o tempo total em anos, meses e dias, sem contar duas vezes os períodos simultâneos. Ferramenta gratuita.">
+  <meta name="author" content="Erivelton Rossi">
+  <link rel="canonical" href="https://www.eriveltonrossi.com.br/ferramentas/tempo-de-contribuicao.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Erivelton Rossi">
+  <meta property="og:title" content="Somador de tempo de contribuição gratuito (INSS) | Erivelton Rossi">
+  <meta property="og:description" content="Some seus períodos de trabalho e veja o tempo total em anos, meses e dias, sem contar duas vezes os períodos simultâneos. Ferramenta gratuita.">
+  <meta property="og:url" content="https://www.eriveltonrossi.com.br/ferramentas/tempo-de-contribuicao.html">
+  <meta property="og:image" content="https://www.eriveltonrossi.com.br/assets/og-erivelton.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#4d0712">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../boletins/boletim.css">
+  <link rel="stylesheet" href="../assets/ferramentas.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Somador de tempo de contribuição", "url": "https://www.eriveltonrossi.com.br/ferramentas/tempo-de-contribuicao.html", "description": "Soma períodos de trabalho sem duplicar sobreposições e converte em anos, meses e dias.", "applicationCategory": "UtilityApplication", "operatingSystem": "Navegador", "inLanguage": "pt-BR", "isAccessibleForFree": true, "author": {"@type": "Person", "name": "Erivelton Rossi", "url": "https://www.eriveltonrossi.com.br/"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://www.eriveltonrossi.com.br/"}, {"@type": "ListItem", "position": 2, "name": "Ferramentas", "item": "https://www.eriveltonrossi.com.br/ferramentas/"}, {"@type": "ListItem", "position": 3, "name": "Tempo de contribuição", "item": "https://www.eriveltonrossi.com.br/ferramentas/tempo-de-contribuicao.html"}]}</script>
+</head>
+<body>
+
+<header>
+  <div class="topo">
+    <a class="logo-nome" href="../">Erivelton Rossi</a>
+    <div class="logo-sub">Bacharel em Direito &nbsp;·&nbsp; Contador (CRC ativo) &nbsp;·&nbsp; Herval d'Oeste / SC</div>
+    <nav>
+      <a href="../">Início</a>
+      <a href="../guias/">Guias</a>
+      <a href="../ferramentas/" class="ativo">Ferramentas</a>
+      <a href="../boletins/">Boletins</a>
+      <a href="../#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<section class="bol-hero">
+  <div class="bol-hero-inner">
+    <p class="secao-titulo">Ferramenta gratuita · Previdência</p>
+    <h1>Somador de <em>tempo de contribuição</em></h1>
+    <p class="lead">Some carteira assinada, contribuições e atividade rural em um só lugar e tenha uma primeira noção do seu tempo total.</p>
+    <p class="atualizado">Atualizado em 02/11/2026</p>
+  </div>
+</section>
+
+<main class="bol-conteudo">
+  <div class="ferramenta">
+    <p class="det" style="font-size:14px;color:var(--texto-mid);margin-bottom:6px;">Informe cada período de trabalho (carteira assinada, contribuição como autônomo/MEI, atividade rural). Períodos que se sobrepõem são contados uma única vez.</p>
+    <div id="lista"></div>
+    <div class="acoes">
+      <button class="btn claro" type="button" id="add">+ Adicionar período</button>
+      <button class="btn" type="button" id="somar">Somar tempo</button>
+    </div>
+    <div class="resultado" id="res" hidden aria-live="polite"></div>
+  </div>
+
+  <div class="guia">
+    <h2>Como a soma é feita</h2>
+    <p>A ferramenta une os períodos, elimina os dias repetidos (atividades simultâneas não contam em dobro) e converte o total de dias em anos, meses e dias, usando a convenção de 365 dias por ano e 30 dias por mês. Também mostra quantos <strong>meses diferentes</strong> aparecem nos períodos, número que serve como referência inicial para a carência.</p>
+    <h3>O que esta conta não faz</h3>
+    <ul>
+      <li>Não verifica se o período está no CNIS nem se as contribuições foram pagas em dia ou acima do mínimo.</li>
+      <li>Não converte tempo especial em comum nem aplica regras de transição da Reforma da Previdência (EC 103/2019).</li>
+      <li>Carência e tempo de contribuição seguem regras próprias; o número de meses é só um indicativo.</li>
+    </ul>
+    <p>Para conferir os períodos oficiais, baixe o extrato do CNIS no <a href="https://meu.inss.gov.br" target="_blank" rel="noopener">Meu INSS</a>. Se faltar algum vínculo, veja o <a href="checklist-documentos.html">checklist de documentos</a>.</p>
+  </div>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var n = 0;
+  function linha(ini, fim) {
+    n++;
+    var d = document.createElement('div'); d.className = 'periodo';
+    d.innerHTML = '<div class="campo"><label for="i' + n + '">Início</label><input type="date" id="i' + n + '" class="ini" value="' + (ini || '') + '"></div>' +
+      '<div class="campo"><label for="f' + n + '">Fim</label><input type="date" id="f' + n + '" class="fim" value="' + (fim || '') + '"></div>' +
+      '<button type="button" class="remover" aria-label="Remover período">Remover</button>';
+    d.querySelector('.remover').addEventListener('click', function () { d.remove(); });
+    $('lista').appendChild(d);
+  }
+  function dia(iso) { var p = iso.split('-').map(Number); return Date.UTC(p[0], p[1] - 1, p[2]) / 86400000; }
+  linha(); linha();
+  $('add').addEventListener('click', function () { linha(); });
+  $('somar').addEventListener('click', function () {
+    var ps = [], erro = '', res = $('res');
+    document.querySelectorAll('.periodo').forEach(function (el, k) {
+      var a = el.querySelector('.ini').value, b = el.querySelector('.fim').value;
+      if (!a && !b) return;
+      if (!a || !b) { erro = 'Preencha início e fim do período ' + (k + 1) + '.'; return; }
+      if (b < a) { erro = 'No período ' + (k + 1) + ', o fim é anterior ao início.'; return; }
+      ps.push([dia(a), dia(b)]);
+    });
+    res.hidden = false;
+    if (erro) { res.innerHTML = '<p class="det">' + erro + '</p>'; return; }
+    if (!ps.length) { res.innerHTML = '<p class="det">Informe ao menos um período.</p>'; return; }
+    ps.sort(function (x, y) { return x[0] - y[0]; });
+    var unidos = [], total = 0, bruto = 0;
+    ps.forEach(function (p) {
+      bruto += p[1] - p[0] + 1;
+      var u = unidos[unidos.length - 1];
+      if (u && p[0] <= u[1] + 1) u[1] = Math.max(u[1], p[1]); else unidos.push([p[0], p[1]]);
+    });
+    var meses = {};
+    unidos.forEach(function (u) {
+      total += u[1] - u[0] + 1;
+      for (var x = u[0]; x <= u[1]; x++) { var dt = new Date(x * 86400000); meses[dt.getUTCFullYear() * 12 + dt.getUTCMonth()] = 1; }
+    });
+    var anos = Math.floor(total / 365), r = total % 365, m = Math.floor(r / 30), dd = r % 30;
+    var nm = Object.keys(meses).length, sobre = bruto - total;
+    res.innerHTML = '<div class="det">Tempo total, sem sobreposições</div>' +
+      '<div class="grande">' + anos + ' anos, ' + m + ' meses e ' + dd + ' dias</div>' +
+      '<table><tr><td>Total em dias</td><td>' + total.toLocaleString('pt-BR') + '</td></tr>' +
+      '<tr><td>Meses diferentes com atividade (referência para carência)</td><td>' + nm + '</td></tr>' +
+      '<tr><td>Dias sobrepostos descontados</td><td>' + sobre.toLocaleString('pt-BR') + '</td></tr>' +
+      '<tr><td>Referência: 15 anos de carência (180 meses)</td><td>' + (nm >= 180 ? 'atingida' : 'faltam ' + (180 - nm) + ' meses') + '</td></tr></table>' +
+      '<p class="det">Estimativa informativa. O tempo reconhecido depende do CNIS e da análise do INSS.</p>' +
+      '<div class="acoes"><a class="btn" target="_blank" rel="noopener" href="https://wa.me/5549991242014?text=' +
+      encodeURIComponent('Olá, somei no site ' + anos + ' anos, ' + m + ' meses e ' + dd + ' dias de contribuição e gostaria de uma orientação.') +
+      '">Quero uma análise do meu CNIS</a> <button class="btn claro" type="button" onclick="window.print()">Imprimir</button></div>';
+  });
+})();
+</script>
+
+  <section class="cta">
+    <h2>Quer ajuda com o seu caso?</h2>
+    <p>Atendimento virtual, com agendamento, para produtores rurais, trabalhadores e pequenos negócios de Herval d'Oeste, Joaçaba, Campos Novos e região.</p>
+    <div class="hero-acoes">
+      <a class="btn-primario" href="https://wa.me/5549991242014?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida" target="_blank" rel="noopener">Conversar pelo WhatsApp</a>
+      <a class="btn-secundario" href="../boletins/">Ler o boletim semanal</a>
+    </div>
+  </section>
+
+  <p class="aviso">Conteúdo e ferramentas de caráter exclusivamente informativo e educativo. Os resultados são estimativas e não substituem a análise individual do caso nem os cálculos oficiais do INSS ou da Receita Federal. O autor é bacharel em Direito e contador com registro ativo no CRC, ainda não inscrito na OAB. Demandas que exijam atuação privativa de advogado são encaminhadas a profissional habilitado.</p>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Erivelton Rossi. Bacharel em Direito, não inscrito na OAB, e contador com registro ativo no CRC. Conteúdo protegido pela Lei 9.610/98.</p>
+    <div class="footer-links">
+      <a href="../">Início</a>
+      <a href="../guias/">Guias</a>
+      <a href="../ferramentas/">Ferramentas</a>
+      <a href="../boletins/">Boletins</a>
+      <a href="../politica.html">Privacidade</a>
+      <a href="../direitos.html">Direitos Autorais</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
