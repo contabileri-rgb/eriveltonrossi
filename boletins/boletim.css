@@ -125,6 +125,8 @@ nav a.ativo { box-shadow: inset 0 -1px 0 var(--ouro); border-radius: 0; }
 .item h3 { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 600; color: var(--vermelho); line-height: 1.35; margin-bottom: 6px; }
 .item .data { font-size: 12.5px; font-weight: 500; color: var(--ouro); letter-spacing: 0.03em; margin-bottom: 12px; }
 .item p { font-size: 15px; color: var(--texto-mid); font-weight: 300; margin-bottom: 12px; }
+.item ul { font-size: 15px; color: var(--texto-mid); font-weight: 300; margin: 0 0 12px 20px; }
+.item li { margin-bottom: 6px; }
 .quem, .ajuda { font-size: 14px; border-radius: var(--raio); padding: 11px 14px; margin-top: 8px; color: var(--texto-mid); }
 .quem { background: var(--cinza-bg); }
 .ajuda { background: var(--ouro-claro); }
