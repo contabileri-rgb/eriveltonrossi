@@ -27,6 +27,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="assets/identidade-juridica.css">
   <style>
     /* ══════════════════════════════════════════════════
        TOKENS DE DESIGN
@@ -328,71 +329,6 @@
       background: rgba(255,255,255,0.08);
       border-color: rgba(255,255,255,0.35);
       color: #fff;
-    }
-
-    /* Foto hero com efeito */
-    .hero-foto-wrap {
-      position: relative;
-      display: flex;
-      justify-content: center;
-    }
-
-    .hero-foto-wrap::before {
-      content: '';
-      position: absolute;
-      inset: -3px;
-      border-radius: 50%;
-      background: conic-gradient(from 0deg, transparent 0%, var(--ouro) 25%, transparent 50%, var(--ouro) 75%, transparent 100%);
-      animation: rotateBorder 6s linear infinite;
-      z-index: 0;
-    }
-
-    .hero-foto-wrap::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, rgba(196,154,42,0.2), transparent 60%);
-      z-index: 1;
-    }
-
-    @keyframes rotateBorder {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    .hero-foto {
-      width: 220px; height: 220px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid rgba(30,5,10,0.9);
-      box-shadow: 0 12px 48px rgba(0,0,0,0.4), 0 0 0 1px rgba(196,154,42,0.2);
-      position: relative;
-      z-index: 2;
-    }
-
-    /* Badge flutuante na foto */
-    .hero-badge {
-      position: absolute;
-      bottom: 12px;
-      right: -10px;
-      background: var(--ouro);
-      color: #1a0d00;
-      font-size: 13px;
-      font-weight: 600;
-      padding: 6px 14px;
-      border-radius: 999px;
-      white-space: nowrap;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      box-shadow: 0 4px 16px rgba(196,154,42,0.4);
-      z-index: 3;
-      animation: badgePulse 3s ease-in-out infinite;
-    }
-
-    @keyframes badgePulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.04); }
     }
 
     .hero-epigrafe {
@@ -1663,7 +1599,7 @@
     }
 
     .hero-texto { animation: fadeUp 0.7s ease both; }
-    .hero-foto-wrap { animation: fadeUp 0.7s ease 0.2s both; }
+    .hero-emblema { animation: fadeUp 0.7s ease 0.2s both; }
 
     /* ── BOLETIM DA SEMANA ─────────────────────────── */
     .boletim-secao {
@@ -1716,9 +1652,6 @@
 
       .hero { min-height: auto; padding: 60px 20px 52px; }
       .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 36px; }
-      .hero-foto { width: 150px; height: 150px; }
-      .hero-foto-wrap { order: -1; }
-      .hero-badge { right: 0; }
       .hero-cta-grupo { justify-content: center; }
       .aviso-academico { margin: 24px auto 0; }
       .hero-stats { justify-content: center; }
@@ -1858,9 +1791,14 @@
       </p>
     </div>
 
-    <div class="hero-foto-wrap">
-      <picture><source srcset="assets/erivelton-600.webp" type="image/webp"><img src="assets/erivelton-600.jpg" width="600" height="600" fetchpriority="high" alt="Foto de Erivelton Rossi, bacharel em Direito e contador" class="hero-foto"></picture>
-      <span class="hero-badge">Bacharel em Direito</span>
+    <div class="hero-emblema" aria-hidden="true">
+      <div class="emblema-circulo"><img src="assets/simbolos/balanca.svg" alt="" width="130" height="130"></div>
+      <div class="emblema-icones">
+        <img src="assets/simbolos/livro.svg" alt="" width="34" height="34">
+        <img src="assets/simbolos/coluna.svg" alt="" width="34" height="34">
+        <img src="assets/simbolos/martelo.svg" alt="" width="34" height="34">
+      </div>
+      <p class="emblema-lema">Ius est ars boni et aequi</p>
     </div>
   </div>
 </section>
@@ -1986,6 +1924,7 @@
 </main>
 
 <!-- ── ÁREAS DE ATUAÇÃO ─────────────────────────────── -->
+<div class="ornamento" aria-hidden="true"><img src="assets/simbolos/balanca.svg" alt=""></div>
 <section class="areas-secao" id="atuacao">
   <div class="areas-inner">
     <p class="secao-titulo">Temas de interesse</p>
@@ -2128,6 +2067,7 @@
 </section>
 
 <!-- ── PORTAIS JURÍDICOS ─────────────────────────────── -->
+<div class="ornamento" aria-hidden="true"><img src="assets/simbolos/coluna.svg" alt=""></div>
 <section class="portais-secao" id="portais">
   <div class="portais-inner">
     <p class="secao-titulo">Fontes de consulta</p>
@@ -2204,6 +2144,7 @@
 </section>
 
 <!-- ── REFERÊNCIAS ──────────────────────────────────── -->
+<div class="ornamento" aria-hidden="true"><img src="assets/simbolos/livro.svg" alt=""></div>
 <section class="referencias-secao" id="referencias">
   <div class="referencias-inner">
     <p class="secao-titulo">Doutrina e referências</p>
@@ -2262,6 +2203,7 @@
 </section>
 
 <!-- ── COMENTÁRIOS ──────────────────────────────────── -->
+<div class="ornamento" aria-hidden="true"><img src="assets/simbolos/martelo.svg" alt=""></div>
 <section class="comentarios-secao" id="comentarios">
   <div class="comentarios-inner">
     <p class="secao-titulo">Participação</p>

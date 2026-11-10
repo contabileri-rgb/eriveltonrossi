@@ -1,3 +1,4 @@
+@import url("../assets/identidade-juridica.css");
 /* Estilo dos boletins semanais: mesma identidade visual do site principal */
 :root {
   --vermelho: #7a0c1f;
@@ -137,7 +138,7 @@ nav a.ativo { box-shadow: inset 0 -1px 0 var(--ouro); border-radius: 0; }
 .prazos { list-style: none; background: var(--branco); border: 1px solid var(--cinza-borda); border-radius: var(--raio-lg); overflow: hidden; box-shadow: var(--sombra-sutil); }
 .prazos li { display: flex; gap: 16px; padding: 13px 20px; border-bottom: 1px solid var(--cinza-borda); font-size: 18px; color: var(--texto-mid); }
 .prazos li:last-child { border-bottom: 0; }
-.prazos .d { flex: none; width: 54px; font-family: 'Playfair Display', serif; font-weight: 700; color: var(--vermelho); }
+.prazos .d { flex: none; min-width: 64px; white-space: nowrap; font-family: 'Playfair Display', serif; font-weight: 700; color: var(--vermelho); }
 
 /* Chamada final */
 .cta {
