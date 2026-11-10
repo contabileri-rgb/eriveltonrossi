@@ -1,0 +1,97 @@
+/* Identidade jurídica compartilhada por todas as páginas:
+   marca d'água com a foto + símbolos do Direito.
+   Incluída no index/direitos/política por <link> e nas demais via boletim.css. */
+
+/* ── Marca d'água: foto fixa, discreta, atrás do conteúdo ── */
+body::after {
+  content: '';
+  position: fixed;
+  right: -4vw;
+  bottom: -2vh;
+  width: min(56vw, 560px);
+  aspect-ratio: 1;
+  background: url("erivelton-600.webp") center / cover no-repeat;
+  filter: grayscale(1) contrast(1.1);
+  opacity: 0.08;
+  -webkit-mask-image: radial-gradient(circle at 50% 45%, #000 38%, transparent 70%);
+          mask-image: radial-gradient(circle at 50% 45%, #000 38%, transparent 70%);
+  pointer-events: none;
+  z-index: 50;
+  mix-blend-mode: multiply;
+}
+@media (max-width: 600px) {
+  body::after { width: 88vw; right: -14vw; opacity: 0.06; }
+}
+@media print { body::after { display: none; } }
+
+/* ── Padrão de símbolos (balança, §, coluna, martelo) nos cabeçalhos ── */
+.hero, .bol-hero { position: relative; isolation: isolate; }
+.hero::after, .bol-hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: url("simbolos/padrao.svg") 0 0 / 260px 260px repeat;
+  opacity: 0.035;
+  pointer-events: none;
+  z-index: 0;
+}
+.bol-hero > * { position: relative; z-index: 1; }
+
+/* ── Rótulos de seção com balança ── */
+.secao-titulo::before {
+  content: '' !important;
+  width: 18px !important; height: 18px !important;
+  flex: 0 0 18px;
+  background: url("simbolos/balanca.svg") center / contain no-repeat !important;
+  opacity: 0.95 !important;
+}
+
+/* ── Ornamento divisor: linha · símbolo · linha ── */
+.ornamento {
+  display: flex; align-items: center; justify-content: center; gap: 16px;
+  max-width: 1100px; margin: 0 auto; padding: 8px 20px;
+}
+.ornamento::before, .ornamento::after {
+  content: ''; flex: 1; max-width: 220px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(196,154,42,0.55), transparent);
+}
+.ornamento img { width: 30px; height: 30px; opacity: 0.85; }
+
+/* ── Faixa de símbolos no topo do rodapé (todas as páginas) ── */
+footer::before {
+  content: '';
+  display: block;
+  max-width: 300px; height: 30px;
+  margin: 0 auto 26px;
+  background:
+    url("simbolos/balanca.svg") 0 50% / 30px 30px no-repeat,
+    url("simbolos/livro.svg") 33.3% 50% / 30px 30px no-repeat,
+    url("simbolos/coluna.svg") 66.6% 50% / 30px 30px no-repeat,
+    url("simbolos/martelo.svg") 100% 50% / 30px 30px no-repeat;
+  opacity: 0.6;
+}
+
+/* ── Emblema que substitui a foto no topo da página inicial ── */
+.hero-emblema {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; align-items: center; gap: 18px;
+}
+.emblema-circulo {
+  width: 240px; height: 240px; border-radius: 50%;
+  display: grid; place-items: center;
+  border: 2px solid rgba(196,154,42,0.55);
+  box-shadow: inset 0 0 0 10px rgba(196,154,42,0.06), inset 0 0 0 11px rgba(196,154,42,0.3);
+  background: radial-gradient(circle at 50% 40%, rgba(196,154,42,0.14), transparent 70%);
+}
+.emblema-circulo img { width: 130px; height: 130px; }
+.emblema-icones { display: flex; gap: 22px; }
+.emblema-icones img { width: 34px; height: 34px; opacity: 0.8; }
+.emblema-lema {
+  font-family: 'Playfair Display', Georgia, serif; font-style: italic;
+  font-size: 18px; color: rgba(196,154,42,0.85); letter-spacing: 0.04em;
+}
+@media (max-width: 768px) {
+  .hero-emblema { order: -1; }
+  .emblema-circulo { width: 150px; height: 150px; }
+  .emblema-circulo img { width: 84px; height: 84px; }
+  .emblema-icones img { width: 28px; height: 28px; }
+}

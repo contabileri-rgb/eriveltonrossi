@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="260" viewBox="0 0 260 260" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<g transform="translate(20 20)"><path d="M32 8v44M20 56h24M12 16h40M14 16 7 34M14 16l7 18M5 34a9 4 0 0 0 18 0zM50 16l-7 18M50 16l7 18M41 34a9 4 0 0 0 18 0z"/></g>
+<g transform="translate(160 40)"><text x="20" y="44" font-family="Georgia,serif" font-size="48" fill="#ffffff" stroke="none">§</text></g>
+<g transform="translate(40 160)"><path d="M8 20 32 6l24 14zM10 24h44M14 28v22M24 28v22M40 28v22M50 28v22M10 54h44"/></g>
+<g transform="translate(170 165)"><path d="M19 15l16 16M33 1l16 16M30 28 10 48a3 3 0 0 0 4 4l20-20M34 56h24"/><rect x="22" y="6" width="26" height="12" rx="3" transform="rotate(45 35 12)"/></g>
+</svg>
